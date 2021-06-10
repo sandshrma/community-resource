@@ -1,6 +1,6 @@
 import React from 'react';
 import { VerticalNav } from '@innovaccer/design-system';
-import Community from '../Pages/PatientSummary/community';
+//import Community from '../Pages/PatientSummary/community';
 import {Switch, Route} from 'react-router-dom';
 
 const VerticalNavigation=() => {
@@ -113,7 +113,6 @@ const VerticalNavigation=() => {
       />
        <Switch>
         <Route path="/community"/>
-        <Community/>
       </Switch>
     </div>
   );
