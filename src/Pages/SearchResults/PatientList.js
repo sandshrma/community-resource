@@ -52,8 +52,7 @@ const Patients = () => {
 
   const [{ term }, dispatch] = useStateValue();
   const data = GetData();
-
-   const filtered_data = data.data.filter((patient_data) => {
+   const filtered_data = data.data.data.filter((patient_data) => {              //change to data.data in case of api call
      const joined = (
        patient_data.dob +
        " " +
