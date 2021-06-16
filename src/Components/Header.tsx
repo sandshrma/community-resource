@@ -19,7 +19,6 @@ font-weight: var(--font-weight-bold);
 `;
 
 const Header = ({ data }: any) => {
-  console.log(data.firstName);
   return (
     <Wrapper className="position-static d-flex w-100 align-items-center bg-light">
       <Icon size={10} className="m-4 ml-6">

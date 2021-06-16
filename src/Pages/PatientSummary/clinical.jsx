@@ -4,9 +4,9 @@ import Accordion from "../../Components/Accordion";
 
 const Clinical = () => {
     return (
-        <div className="w-100 p-4 ml-14">
-<div className="d-flex justify-content-between">
-  <div className="d-flex pl-8">
+        <div className="w-100 p-4 pl-8">
+<div className="w-100 d-flex justify-content-between">
+  <div className="d-flex ">
     <Heading className="pr-4">Summary</Heading>{" "}
     <Input
       icon="search"
@@ -29,9 +29,9 @@ const Clinical = () => {
     </Button>
   </div>
 </div>
- <div className=" display-flex pl-8 py-5">
-  <Accordion />
-  <div className="bg-transparent w-25"></div>
+ <div className="w-100 d-flex py-5 justify-content-between ">
+  <Accordion/>
+<div className= " m-6" style={{width:'15%'}}> Side Panel </div> 
 </div> 
 </div>
     )

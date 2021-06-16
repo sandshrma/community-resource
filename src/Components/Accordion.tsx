@@ -1,19 +1,19 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import {Icon} from '@innovaccer/design-system';
+import {Icon,Heading} from '@innovaccer/design-system';
 import "@innovaccer/design-system/css";
 
 const AccordianSection=styled.div`
 background-color:white;
-height:45%;
 color:black;
 box-shadow: var(--shadow-s);
+
 `;
-const DropDown=styled.div`
+
+const DropDownContent=styled.div`
 border-top:1.5px solid rgb(134, 134, 134, 0.2);
 border-bottom-left-radius:100%;
 border-bottom-right-radius:100%;
-margin-left:500px;
 `;
 
 const Accordion = () => {
@@ -25,13 +25,14 @@ const Accordion = () => {
   }
   console.log(state);
   return (
-    <AccordianSection>
-    <div className="d-flex justify-content-between m-6 ml-14" >
-      Heading
-      {state?<Icon name="keyboard_arrow_up" onClick={toggle}/>:<Icon name="keyboard_arrow_down" onClick={toggle}/>}
+    <AccordianSection className="mt-4 flex-fill">
+    <div className="d-flex justify-content-between" >
+      <div className="d-flex p-5"><Icon size={20} name="assignment_ind" className="p-3"/><Heading >Clinical Data</Heading></div>
+      
+      {state?<Icon size={20} name="keyboard_arrow_up" onClick={toggle} className="p-5"/>:<Icon size={20} name="keyboard_arrow_down" onClick={toggle} className="p-5"/>}
     </div>
     {
-      state? <DropDown>dropdown content </DropDown> : <div/>
+      state? <DropDownContent className="p-5  h-25"> dropdown content </DropDownContent> : <div className="bg-inverse"/>
     }
     </AccordianSection>
   )

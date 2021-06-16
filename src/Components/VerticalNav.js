@@ -1,7 +1,8 @@
 import React from 'react';
 import { VerticalNav } from '@innovaccer/design-system';
 //import Community from '../Pages/PatientSummary/community';
-import {Switch, Route} from 'react-router-dom';
+import Clinical from '../Pages/PatientSummary/clinical';
+import Community from '../Pages/PatientSummary/community';
 
 const VerticalNavigation=() => {
 
@@ -20,37 +21,44 @@ const VerticalNavigation=() => {
         {
           name: 'care_management.timeline',
           label: 'Timeline',
-          icon: 'people'
+          icon: 'people',
+          link: '/timeline',
         },
         {
           name: 'care_management.care_protocol',
           label: 'Care Protocol',
-          icon: 'fact_check'
+          icon: 'fact_check',
+          link: '/care_protocol',
         },
         {
           name: 'care_management.assessments',
           label: 'Assessments',
-          icon: 'assessment'
+          icon: 'assessment',
+          link: '/assesment',
         },
         {
           name: 'care_management.tasks',
           label: 'Tasks',
-          icon: 'alarm'
+          icon: 'alarm',
+          link: '/tasks',
         },
         {
           name: 'care_management.goals',
           label: 'Goals',
-          icon: 'golf_course'
+          icon: 'golf_course',
+          link: '/goals',
         },
         {
           name: 'care_management.care_plans',
           label: 'Care Plans',
-          icon: 'accessibility_new'
+          icon: 'accessibility_new',
+          link: '/care_plans',
         },
         {
           name: 'care_management.medical_adherence',
           label: 'Medical Adherence',
-          icon: 'local_pharmacy'
+          icon: 'local_pharmacy',
+          link: '/medical_adherence',
         },
         {
           name: 'care_management.community_resources',
@@ -63,33 +71,39 @@ const VerticalNavigation=() => {
     {
       name: 'risk',
       label: 'Risk',
-      icon: 'favorite'
+      icon: 'favorite',
+      link: '/risk',
     },
     {
         name: 'claims',
         label: 'Claims',
-        icon: 'receipt'
+        icon: 'receipt',
+        link: '/claims',
       },
     {
       name: 'profile',
       label: 'Profile',
-      icon: 'account_circle'
+      icon: 'account_circle',
+      link: '/profile',
     },
 
     {
       name: 'manual_entry',
       label: 'Manual Entry',
-      icon: 'edit'
+      icon: 'edit',
+      link: '/manual_entry',
     },
     {
       name: 'patient_notes',
       label: 'Patient Notes',
-      icon: 'note_add'
+      icon: 'note_add',
+      link: '/patient_notes',
     },
     {
       name: 'documents',
       label: 'Documents',
-      icon: 'assignment'
+      icon: 'assignment',
+      link: '/document',
     },
   ];
 
@@ -100,10 +114,11 @@ const VerticalNavigation=() => {
   const onClickHandler = (menu) => {
     console.log('menu-clicked: ', menu);
     setActive(menu);
+
   };
 
   return (
-    <div style={{ height: 'calc(80vh)', background: 'var(--secondary-lightest)' }}>
+    <div style={{ height: 'calc(80vh)', background: 'var(--secondary-lightest)' ,display:'flex', width:'100%'}}>
       <VerticalNav
         menus={data}
         expanded={true}
@@ -111,9 +126,8 @@ const VerticalNavigation=() => {
         onClick={onClickHandler}
         hoverable={false}
       />
-       <Switch>
-        <Route path="/community"/>
-      </Switch>
+      {
+      active.link==='/community'? <Community/>: <Clinical/>}    
     </div>
   );
 
