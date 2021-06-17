@@ -19,12 +19,12 @@
             {
               "label": "Help Pay for Healthcare",
               "value": "Help Pay for Healthcare",
-              "count": "2"
+              "count": "4"
             },
             {
               "label": "Help Pay for Housing",
               "value": "Help Pay for Housing",
-              "count": "1"
+              "count": "2"
             },
             {
               "label": "Help Pay for Gas",
@@ -34,7 +34,7 @@
             {
               "label": "Help Pay for School",
               "value": "Help Pay for School",
-              "count": "0"
+              "count": "1"
             },
             {
               "label": "Help Pay for Utilities",
@@ -51,12 +51,12 @@
           "value": "Emergency Payments",
           "count": "0"
         },
-        { "label": "Emergency Food", "value": "Emergency Food", "count": "1" },
+        { "label": "Emergency Food", "value": "Emergency Food", "count": "0" },
         {
           "children": [],
           "label": "Temporary Shelter",
           "value": "Temporary Shelter",
-          "count": "0"
+          "count": "1"
         },
         {
           "children": [
@@ -74,7 +74,7 @@
         {
           "label": "Psychiatric Emergency Services",
           "value": "Psychiatric Emergency Services",
-          "count": "0"
+          "count": "1"
         }
       ]
     },
@@ -87,10 +87,10 @@
           "value": "Community Gardens",
           "count": "0"
         },
-        { "label": "Emergency Food", "value": "Emergency Food", "count": "1" },
-        { "label": "Food Delivery", "value": "Food Delivery", "count": "1" },
-        { "label": "Food Pantry", "value": "Food Pantry", "count": "2" },
-        { "label": "Meals", "value": "Meals", "count": "1" },
+        { "label": "Emergency Food", "value": "Emergency Food", "count": "0" },
+        { "label": "Food Delivery", "value": "Food Delivery", "count": "0" },
+        { "label": "Food Pantry", "value": "Food Pantry", "count": "0" },
+        { "label": "Meals", "value": "Meals", "count": "2" },
         {
           "children": [
             {
@@ -106,7 +106,7 @@
         {
           "label": "Nutrition Education",
           "value": "Nutrition Education",
-          "count": "0"
+          "count": "2"
         }
       ]
     },
@@ -117,12 +117,12 @@
         {
           "label": "Temporary Shelter",
           "value": "Temporary Shelter",
-          "count": "0"
+          "count": "1"
         },
         {
           "label": "Help Find Housing",
           "value": "Help Find Housing",
-          "count": "1"
+          "count": "2"
         },
         {
           "children": [
@@ -139,31 +139,23 @@
           ],
           "label": "Help Pay for Housing",
           "value": "Help Pay for Housing",
-          "count": "1"
+          "count": "2"
         },
         {
-          "children": [],
+          "children": [
+            { "label": "Pest Control", "value": "Pest Control", "count": "0" }
+          ],
           "label": "Maintenance & Repairs",
           "value": "Maintenance & Repairs",
-          "count": "2"
+          "count": "0"
         },
         {
           "children": [
             {
               "children": [
                 {
-                  "label": "Assisted Living",
-                  "value": "Assisted Living",
-                  "count": "0"
-                },
-                {
                   "label": "Independent Living",
                   "value": "Independent Living",
-                  "count": "1"
-                },
-                {
-                  "label": "Nursing Home",
-                  "value": "Nursing Home",
                   "count": "0"
                 }
               ],
@@ -175,11 +167,6 @@
             {
               "children": [
                 {
-                  "label": "Nursing Home",
-                  "value": "Nursing Home",
-                  "count": "0"
-                },
-                {
                   "label": "Sober Living",
                   "value": "Sober Living",
                   "count": "1"
@@ -187,12 +174,12 @@
               ],
               "label": "Short-Term Housing",
               "value": "Short-Term Housing",
-              "count": "0"
+              "count": "2"
             }
           ],
           "label": "Residential Housing",
           "value": "Residential Housing",
-          "count": "1"
+          "count": "4"
         }
       ]
     },
@@ -223,20 +210,14 @@
             {
               "label": "Blankets & Fans",
               "value": "Blankets & Fans",
-              "count": "1"
+              "count": "0"
             },
             { "label": "Books", "value": "Books", "count": "1" },
             { "label": "Furniture", "value": "Furniture", "count": "0" },
-            { "label": "Home Fuels", "value": "Home Fuels", "count": "0" },
-            {
-              "label": "Efficient Appliances",
-              "value": "Efficient Appliances",
-              "count": "0"
-            },
             {
               "label": "Personal Care Items",
               "value": "Personal Care Items",
-              "count": "0"
+              "count": "1"
             },
             {
               "label": "Supplies for School",
@@ -246,7 +227,7 @@
           ],
           "label": "Home Goods",
           "value": "Home Goods",
-          "count": "1"
+          "count": "2"
         },
         {
           "children": [
@@ -254,10 +235,16 @@
               "label": "Assistive Technology",
               "value": "Assistive Technology",
               "count": "0"
-            }
+            },
+            { "label": "Prostheses", "value": "Prostheses", "count": "0" }
           ],
           "label": "Medical Supplies",
           "value": "Medical Supplies",
+          "count": "0"
+        },
+        {
+          "label": "Personal Safety",
+          "value": "Personal Safety",
           "count": "0"
         },
         { "label": "Toys & Gifts", "value": "Toys & Gifts", "count": "0" }
@@ -299,7 +286,7 @@
           ],
           "label": "Transportation",
           "value": "Transportation",
-          "count": "3"
+          "count": "0"
         }
       ]
     },
@@ -309,27 +296,28 @@
       "children": [
         {
           "children": [
+            { "label": "12-Step", "value": "12-Step", "count": "1" },
             { "label": "Detox", "value": "Detox", "count": "0" },
             {
               "label": "Outpatient Treatment",
               "value": "Outpatient Treatment",
-              "count": "0"
+              "count": "6"
             },
             {
               "label": "Residential Treatment",
               "value": "Residential Treatment",
-              "count": "0"
+              "count": "2"
             },
             { "label": "Sober Living", "value": "Sober Living", "count": "1" },
             {
               "label": "Substance Abuse Counseling",
               "value": "Substance Abuse Counseling",
-              "count": "0"
+              "count": "8"
             }
           ],
           "label": "Addiction & Recovery",
           "value": "Addiction & Recovery",
-          "count": "0"
+          "count": "1"
         },
         { "label": "Dental Care", "value": "Dental Care", "count": "1" },
         {
@@ -338,35 +326,35 @@
             {
               "label": "Burial & Funeral Help",
               "value": "Burial & Funeral Help",
-              "count": "0"
+              "count": "1"
             },
-            { "label": "Hospice", "value": "Hospice", "count": "0" }
+            { "label": "Hospice", "value": "Hospice", "count": "1" }
           ],
           "label": "End-of-Life Care",
           "value": "End-of-Life Care",
-          "count": "0"
+          "count": "1"
         },
         {
           "children": [
             {
               "label": "Daily Life Skills",
               "value": "Daily Life Skills",
-              "count": "1"
+              "count": "3"
             },
             {
               "label": "Disease Management",
               "value": "Disease Management",
-              "count": "0"
+              "count": "3"
             },
             {
               "label": "Nutrition Education",
               "value": "Nutrition Education",
-              "count": "0"
+              "count": "2"
             },
             {
               "label": "Parenting Education",
               "value": "Parenting Education",
-              "count": "2"
+              "count": "3"
             },
             {
               "label": "Sex Education",
@@ -386,7 +374,7 @@
           ],
           "label": "Health Education",
           "value": "Health Education",
-          "count": "0"
+          "count": "3"
         },
         {
           "children": [
@@ -398,17 +386,17 @@
             {
               "label": "Discounted Healthcare",
               "value": "Discounted Healthcare",
-              "count": "1"
+              "count": "3"
             },
             {
               "label": "Health Insurance",
               "value": "Health Insurance",
-              "count": "2"
+              "count": "3"
             },
             {
               "label": "Prescription Assistance",
               "value": "Prescription Assistance",
-              "count": "2"
+              "count": "6"
             },
             {
               "label": "Transportation for Healthcare",
@@ -418,7 +406,7 @@
           ],
           "label": "Help Pay for Healthcare",
           "value": "Help Pay for Healthcare",
-          "count": "2"
+          "count": "4"
         },
         { "label": "Vision Care", "value": "Vision Care", "count": "0" },
         {
@@ -431,6 +419,7 @@
             },
             {
               "children": [
+                { "label": "Prostheses", "value": "Prostheses", "count": "0" },
                 {
                   "label": "Assistive Technology",
                   "value": "Assistive Technology",
@@ -444,14 +433,19 @@
             {
               "label": "Skilled Nursing",
               "value": "Skilled Nursing",
-              "count": "1"
+              "count": "0"
             },
             {
               "children": [
                 {
+                  "label": "Disability Screening",
+                  "value": "Disability Screening",
+                  "count": "0"
+                },
+                {
                   "label": "Disease Screening",
                   "value": "Disease Screening",
-                  "count": "2"
+                  "count": "0"
                 },
                 {
                   "label": "Hearing Tests",
@@ -466,30 +460,30 @@
             {
               "label": "Exercise & Fitness",
               "value": "Exercise & Fitness",
+              "count": "1"
+            },
+            {
+              "label": "Personal Hygiene",
+              "value": "Personal Hygiene",
               "count": "0"
             },
             {
               "children": [
-                { "label": "Counseling", "value": "Counseling", "count": "6" },
+                { "label": "Counseling", "value": "Counseling", "count": "14" },
                 {
                   "label": "Pain Management",
                   "value": "Pain Management",
-                  "count": "0"
+                  "count": "1"
                 },
                 {
                   "label": "Disease Management",
                   "value": "Disease Management",
-                  "count": "0"
-                },
-                {
-                  "label": "Nursing Home",
-                  "value": "Nursing Home",
-                  "count": "0"
+                  "count": "3"
                 },
                 {
                   "label": "Physical Therapy",
                   "value": "Physical Therapy",
-                  "count": "1"
+                  "count": "0"
                 },
                 {
                   "label": "Specialized Therapy",
@@ -499,17 +493,22 @@
                 {
                   "label": "In-Home Support",
                   "value": "In-Home Support",
-                  "count": "1"
+                  "count": "0"
                 },
                 {
                   "label": "Residential Treatment",
                   "value": "Residential Treatment",
-                  "count": "0"
+                  "count": "2"
                 },
                 {
                   "label": "Outpatient Treatment",
                   "value": "Outpatient Treatment",
-                  "count": "0"
+                  "count": "6"
+                },
+                {
+                  "label": "Hospital Treatment",
+                  "value": "Hospital Treatment",
+                  "count": "1"
                 }
               ],
               "label": "Prevent & Treat",
@@ -519,7 +518,7 @@
           ],
           "label": "Medical Care",
           "value": "Medical Care",
-          "count": "3"
+          "count": "5"
         },
         {
           "children": [
@@ -534,27 +533,27 @@
                 {
                   "label": "Group Therapy",
                   "value": "Group Therapy",
-                  "count": "0"
+                  "count": "2"
                 },
                 {
                   "label": "Substance Abuse Counseling",
                   "value": "Substance Abuse Counseling",
-                  "count": "0"
+                  "count": "8"
                 },
                 {
                   "label": "Family Counseling",
                   "value": "Family Counseling",
-                  "count": "1"
+                  "count": "3"
                 },
                 {
                   "label": "Individual Counseling",
                   "value": "Individual Counseling",
-                  "count": "1"
+                  "count": "4"
                 }
               ],
               "label": "Counseling",
               "value": "Counseling",
-              "count": "6"
+              "count": "14"
             },
             {
               "label": "Mental Health Evaluation",
@@ -564,17 +563,22 @@
             {
               "label": "Outpatient Treatment",
               "value": "Outpatient Treatment",
-              "count": "0"
+              "count": "6"
+            },
+            {
+              "label": "Hospital Treatment",
+              "value": "Hospital Treatment",
+              "count": "1"
             },
             {
               "label": "Residential Treatment",
               "value": "Residential Treatment",
-              "count": "0"
+              "count": "2"
             },
             {
               "label": "Psychiatric Emergency Services",
               "value": "Psychiatric Emergency Services",
-              "count": "0"
+              "count": "1"
             },
             {
               "label": "Understand Mental Health",
@@ -584,7 +588,7 @@
           ],
           "label": "Mental Health Care",
           "value": "Mental Health Care",
-          "count": "1"
+          "count": "5"
         }
       ]
     },
@@ -621,12 +625,12 @@
                 {
                   "label": "Discounted Healthcare",
                   "value": "Discounted Healthcare",
-                  "count": "1"
+                  "count": "3"
                 },
                 {
                   "label": "Health Insurance",
                   "value": "Health Insurance",
-                  "count": "2"
+                  "count": "3"
                 },
                 {
                   "label": "Medical Supplies",
@@ -636,7 +640,7 @@
                 {
                   "label": "Prescription Assistance",
                   "value": "Prescription Assistance",
-                  "count": "2"
+                  "count": "6"
                 },
                 {
                   "label": "Transportation for Healthcare",
@@ -646,7 +650,7 @@
               ],
               "label": "Help Pay for Healthcare",
               "value": "Help Pay for Healthcare",
-              "count": "2"
+              "count": "4"
             },
             {
               "children": [
@@ -663,7 +667,7 @@
               ],
               "label": "Help Pay for Housing",
               "value": "Help Pay for Housing",
-              "count": "1"
+              "count": "2"
             },
             {
               "children": [
@@ -686,7 +690,7 @@
               ],
               "label": "Help Pay for School",
               "value": "Help Pay for School",
-              "count": "0"
+              "count": "1"
             },
             {
               "children": [
@@ -708,7 +712,7 @@
           ],
           "label": "Financial Assistance",
           "value": "Financial Assistance",
-          "count": "1"
+          "count": "2"
         },
         {
           "children": [
@@ -723,38 +727,37 @@
               "count": "0"
             },
             {
+              "label": "Retirement Benefits",
+              "value": "Retirement Benefits",
+              "count": "0"
+            },
+            {
               "label": "Understand Government Programs",
               "value": "Understand Government Programs",
+              "count": "4"
+            },
+            {
+              "label": "Unemployment Benefits",
+              "value": "Unemployment Benefits",
               "count": "1"
             }
           ],
           "label": "Government Benefits",
           "value": "Government Benefits",
-          "count": "3"
+          "count": "6"
         },
         {
-          "children": [
-            {
-              "label": "Credit Counseling",
-              "value": "Credit Counseling",
-              "count": "1"
-            },
-            {
-              "label": "Savings Program",
-              "value": "Savings Program",
-              "count": "0"
-            }
-          ],
+          "children": [],
           "label": "Financial Education",
           "value": "Financial Education",
-          "count": "2"
+          "count": "3"
         },
         {
           "children": [
             {
               "label": "Health Insurance",
               "value": "Health Insurance",
-              "count": "2"
+              "count": "3"
             }
           ],
           "label": "Insurance",
@@ -784,16 +787,6 @@
               "label": "Adoption Planning",
               "value": "Adoption Planning",
               "count": "0"
-            },
-            {
-              "label": "Adoption Counseling",
-              "value": "Adoption Counseling",
-              "count": "0"
-            },
-            {
-              "label": "Post-Adoption Support",
-              "value": "Post-Adoption Support",
-              "count": "0"
             }
           ],
           "label": "Adoption & Foster Care",
@@ -805,7 +798,7 @@
             {
               "label": "Exercise & Fitness",
               "value": "Exercise & Fitness",
-              "count": "0"
+              "count": "1"
             },
             { "label": "Recreation", "value": "Recreation", "count": "3" },
             {
@@ -824,13 +817,13 @@
             {
               "label": "Burial & Funeral Help",
               "value": "Burial & Funeral Help",
-              "count": "0"
+              "count": "1"
             },
-            { "label": "Hospice", "value": "Hospice", "count": "0" }
+            { "label": "Hospice", "value": "Hospice", "count": "1" }
           ],
           "label": "End-of-Life Care",
           "value": "End-of-Life Care",
-          "count": "0"
+          "count": "1"
         },
         {
           "children": [
@@ -847,20 +840,14 @@
         {
           "children": [
             {
-              "label": "Assisted Living",
-              "value": "Assisted Living",
-              "count": "0"
-            },
-            {
               "label": "Residential Treatment",
               "value": "Residential Treatment",
-              "count": "0"
+              "count": "2"
             },
-            { "label": "Nursing Home", "value": "Nursing Home", "count": "0" },
             {
               "label": "Overnight Camp",
               "value": "Overnight Camp",
-              "count": "0"
+              "count": "1"
             }
           ],
           "label": "Residential Care",
@@ -869,36 +856,37 @@
         },
         {
           "children": [
-            { "label": "Counseling", "value": "Counseling", "count": "6" },
+            { "label": "Counseling", "value": "Counseling", "count": "14" },
             {
               "label": "Help Hotlines",
               "value": "Help Hotlines",
-              "count": "1"
+              "count": "3"
             },
             {
               "label": "Home Visiting",
               "value": "Home Visiting",
-              "count": "1"
+              "count": "0"
             },
             {
               "label": "In-Home Support",
               "value": "In-Home Support",
-              "count": "1"
+              "count": "0"
             },
-            { "label": "Mentoring", "value": "Mentoring", "count": "1" },
+            { "label": "Mentoring", "value": "Mentoring", "count": "0" },
             {
               "label": "One-on-One Support",
               "value": "One-on-One Support",
-              "count": "2"
+              "count": "3"
             },
-            { "label": "Peer Support", "value": "Peer Support", "count": "0" },
+            { "label": "Peer Support", "value": "Peer Support", "count": "1" },
             {
               "label": "Spiritual Support",
               "value": "Spiritual Support",
-              "count": "0"
+              "count": "1"
             },
             {
               "children": [
+                { "label": "12-Step", "value": "12-Step", "count": "1" },
                 {
                   "label": "Bereavement",
                   "value": "Bereavement",
@@ -907,12 +895,12 @@
                 {
                   "label": "Parenting Education",
                   "value": "Parenting Education",
-                  "count": "2"
+                  "count": "3"
                 }
               ],
               "label": "Support Groups",
               "value": "Support Groups",
-              "count": "5"
+              "count": "2"
             },
             {
               "label": "Virtual Support",
@@ -922,7 +910,7 @@
           ],
           "label": "Support Network",
           "value": "Support Network",
-          "count": "7"
+          "count": "6"
         }
       ]
     },
@@ -933,7 +921,7 @@
         {
           "label": "Help Find School",
           "value": "Help Find School",
-          "count": "0"
+          "count": "1"
         },
         {
           "children": [
@@ -956,7 +944,7 @@
           ],
           "label": "Help Pay for School",
           "value": "Help Pay for School",
-          "count": "0"
+          "count": "1"
         },
         {
           "children": [
@@ -976,16 +964,10 @@
               "count": "0"
             },
             {
-              "children": [
-                {
-                  "label": "Credit Counseling",
-                  "value": "Credit Counseling",
-                  "count": "1"
-                }
-              ],
+              "children": [],
               "label": "Financial Education",
               "value": "Financial Education",
-              "count": "2"
+              "count": "3"
             },
             {
               "label": "GED/High-School Equivalency",
@@ -997,17 +979,17 @@
                 {
                   "label": "Disease Management",
                   "value": "Disease Management",
-                  "count": "0"
+                  "count": "3"
                 },
                 {
                   "label": "Nutrition Education",
                   "value": "Nutrition Education",
-                  "count": "0"
+                  "count": "2"
                 },
                 {
                   "label": "Parenting Education",
                   "value": "Parenting Education",
-                  "count": "2"
+                  "count": "3"
                 },
                 {
                   "label": "Sex Education",
@@ -1027,26 +1009,32 @@
               ],
               "label": "Health Education",
               "value": "Health Education",
-              "count": "0"
+              "count": "3"
             },
             {
               "label": "Supported Employment",
               "value": "Supported Employment",
-              "count": "0"
+              "count": "1"
             },
             {
               "label": "Special Education",
               "value": "Special Education",
-              "count": "2"
+              "count": "0"
             },
             { "label": "Tutoring", "value": "Tutoring", "count": "0" }
           ],
           "label": "More Education",
           "value": "More Education",
-          "count": "2"
+          "count": "6"
         },
+        { "label": "Preschool", "value": "Preschool", "count": "0" },
         {
           "children": [
+            {
+              "label": "Citizenship & Immigration",
+              "value": "Citizenship & Immigration",
+              "count": "1"
+            },
             {
               "label": "GED/High-School Equivalency",
               "value": "GED/High-School Equivalency",
@@ -1060,14 +1048,14 @@
           ],
           "label": "Screening & Exams",
           "value": "Screening & Exams",
-          "count": "2"
+          "count": "3"
         },
         {
           "children": [
             {
               "label": "Basic Literacy",
               "value": "Basic Literacy",
-              "count": "0"
+              "count": "1"
             },
             {
               "label": "Computer Class",
@@ -1077,7 +1065,7 @@
             {
               "label": "Daily Life Skills",
               "value": "Daily Life Skills",
-              "count": "1"
+              "count": "3"
             },
             {
               "label": "Interview Training",
@@ -1092,17 +1080,17 @@
             {
               "label": "Skills Assessment",
               "value": "Skills Assessment",
-              "count": "0"
+              "count": "2"
             },
             {
               "label": "Specialized Training",
               "value": "Specialized Training",
-              "count": "2"
+              "count": "1"
             }
           ],
           "label": "Skills & Training",
           "value": "Skills & Training",
-          "count": "6"
+          "count": "7"
         }
       ]
     },
@@ -1115,20 +1103,31 @@
             {
               "label": "Job Placement",
               "value": "Job Placement",
-              "count": "0"
+              "count": "1"
             },
             {
               "label": "Supported Employment",
               "value": "Supported Employment",
-              "count": "0"
+              "count": "1"
             }
           ],
           "label": "Help Find Work",
           "value": "Help Find Work",
-          "count": "1"
+          "count": "2"
         },
         {
-          "children": [],
+          "children": [
+            {
+              "label": "Retirement Benefits",
+              "value": "Retirement Benefits",
+              "count": "0"
+            },
+            {
+              "label": "Unemployment Benefits",
+              "value": "Unemployment Benefits",
+              "count": "1"
+            }
+          ],
           "label": "Help Pay for Work Expenses",
           "value": "Help Pay for Work Expenses",
           "count": "0"
@@ -1138,7 +1137,7 @@
             {
               "label": "Basic Literacy",
               "value": "Basic Literacy",
-              "count": "0"
+              "count": "1"
             },
             {
               "label": "Computer Class",
@@ -1163,22 +1162,22 @@
             {
               "label": "Skills Assessment",
               "value": "Skills Assessment",
-              "count": "0"
+              "count": "2"
             },
             {
               "label": "Specialized Training",
               "value": "Specialized Training",
-              "count": "2"
+              "count": "1"
             }
           ],
           "label": "Skills & Training",
           "value": "Skills & Training",
-          "count": "6"
+          "count": "7"
         },
         {
           "label": "Supported Employment",
           "value": "Supported Employment",
-          "count": "0"
+          "count": "1"
         },
         {
           "label": "Workplace Rights",
@@ -1209,16 +1208,6 @@
                   "label": "Adoption Planning",
                   "value": "Adoption Planning",
                   "count": "0"
-                },
-                {
-                  "label": "Adoption Counseling",
-                  "value": "Adoption Counseling",
-                  "count": "0"
-                },
-                {
-                  "label": "Post-Adoption Support",
-                  "value": "Post-Adoption Support",
-                  "count": "0"
                 }
               ],
               "label": "Adoption & Foster Care",
@@ -1226,15 +1215,20 @@
               "count": "0"
             },
             {
+              "label": "Citizenship & Immigration",
+              "value": "Citizenship & Immigration",
+              "count": "1"
+            },
+            {
               "label": "Discrimination & Civil Rights",
               "value": "Discrimination & Civil Rights",
-              "count": "0"
+              "count": "1"
             },
             { "label": "Guardianship", "value": "Guardianship", "count": "0" },
             {
               "label": "Understand Government Programs",
               "value": "Understand Government Programs",
-              "count": "1"
+              "count": "4"
             },
             {
               "label": "Workplace Rights",
@@ -1244,10 +1238,15 @@
           ],
           "label": "Advocacy & Legal Aid",
           "value": "Advocacy & Legal Aid",
-          "count": "2"
+          "count": "3"
         },
         { "label": "Notary", "value": "Notary", "count": "0" },
-        { "label": "Representation", "value": "Representation", "count": "0" }
+        { "label": "Representation", "value": "Representation", "count": "0" },
+        {
+          "label": "Translation & Interpretation",
+          "value": "Translation & Interpretation",
+          "count": "0"
+        }
       ]
     }
   ]

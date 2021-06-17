@@ -1,15 +1,15 @@
 {
   "nodes": [
-    { "label": "Food", "value": "Food", "count": 0 },
-    { "label": "Money", "value": "Money", "count": 0 },
-    { "label": "Care", "value": "Care", "count": 0 },
-    { "label": "Work", "value": "Work", "count": 0 },
-    { "label": "Education", "value": "Education", "count": 0 },
-    { "label": "Legal", "value": "Legal", "count": 0 },
-    { "label": "Housing", "value": "Housing", "count": 0 },
+    { "label": "Food", "value": "Food", "count": 8 },
+    { "label": "Money", "value": "Money", "count": 6 },
+    { "label": "Care", "value": "Care", "count": 7 },
+    { "label": "Work", "value": "Work", "count": 7 },
+    { "label": "Education", "value": "Education", "count": 5 },
+    { "label": "Legal", "value": "Legal", "count": 5 },
+    { "label": "Housing", "value": "Housing", "count": 2 },
     { "label": "Goods", "value": "Goods", "count": 0 },
     { "label": "Transit", "value": "Transit", "count": 0 },
-    { "label": "Health", "value": "Health", "count": 0 },
+    { "label": "Health", "value": "Health", "count": 1 },
     { "label": "Emergency", "value": "Emergency", "count": 0 }
   ]
 }
