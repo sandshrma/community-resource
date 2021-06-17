@@ -1,7 +1,8 @@
-import React from "react";
+import React , {useState} from "react";
 import styled from "styled-components";
-import { Input, Icon, Radio } from "@innovaccer/design-system";
-import logo from '../../assets/aunt_bertha.png';
+import { Input, Icon, Radio} from "@innovaccer/design-system";
+import logo from "../../assets/aunt_bertha.png";
+import FindResource from "./FindResource";
 
 const Container = styled.div`
   text-align: left;
@@ -23,6 +24,9 @@ const InputWrapper = styled.div`
 `;
 
 const CommunityResources = () => {
+  const [inputValue, setInput] = useState("");
+  console.log(inputValue);
+
   return (
     <Container>
       <Heading className="pt-8 pb-8">Search Community Resources</Heading>
@@ -41,12 +45,12 @@ const CommunityResources = () => {
       <br />
       <h3>Select Source</h3>
       <div className="d-flex">
-        <div className="d-flex">
+        <>
           <Radio
             label="Partner resource"
-            name="partner"
-            onChange={function (_) {}}
+            name="resources"
             value="Partner Resource"
+            onChange={(e) => setInput(e.target.value)}
             className="pr-2"
           />
           <Icon
@@ -55,25 +59,23 @@ const CommunityResources = () => {
             size={16}
             className=" pr-8 pt-3"
           />
-        </div>
+        </>
         <Radio
           label="Interal resource"
-          name="internal"
-          onChange={function (_) {}}
+          name="resources"
           value="Internal Resource"
+          onChange={(e) => setInput(e.target.value)}
           className=" pr-8"
         />
         <div className="d-flex">
-          <Radio
-            name="aunt_bertha"
-            onChange={function (_) {}}
-            value="Aunt Bertha"
-          />
-          
-              <img src={logo} alt= "Aunt Bertha" height="15" className="p-2 pl-4"/>
-        
+          <Radio name="resources" value="Aunt Bertha" onChange={(e) => setInput(e.target.value)}/>
+
+          <img src={logo} alt="Aunt Bertha" height="15" className="p-2 pl-4" />
         </div>
       </div>
+      <h3>Select Service</h3>
+     { FindResource(inputValue) }
+
     </Container>
   );
 };
