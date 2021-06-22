@@ -113,7 +113,7 @@ const ResourceCard = ({ data }) => {
         </div>
         <div className="d-flex justify-content-between w-50 pt-6">
             <div className="d-flex"> <Icon size={18} appearance='alert' name='place'/> NA</div>
-            <div className="d-flex"> <Icon size={18} appearance='warning' name='timer'/> NA</div>
+            <div className="d-flex"> <Icon size={18} appearance='warning' name='access_time'/> Closed</div>
             <div className="d-flex"> <Icon size={18} appearance='success' name='phone'/> NA</div>
             <div className="d-flex"> <Icon size={18} appearance='info' name='near_me'/> NA</div>
         </div>
