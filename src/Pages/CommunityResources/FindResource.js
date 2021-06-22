@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Button} from "@innovaccer/design-system";
+import { Button } from "@innovaccer/design-system";
 import ResourceCards from "./ResourceCards";
 
 const Container = styled.div`
@@ -18,23 +18,40 @@ const SubText = styled.div`
   color: var(--inverse-lighter);
 `;
 
-const FindResource = (input) => {
+const FindResource = (params) => {
+  const input = params.input;
+  params.setResource(params.input);
   return (
     <div>
-        
-        {input === "" ? (
+      {input === "" ? (
+        <div>
           <Container className="mb-4">
             <Text className="pt-11">Unable to fetch categories</Text>{" "}
             <SubText>Please try after some time</SubText>
-            </Container> 
-        ) : (
-         <div> {ResourceCards(input)}</div>
-        )}
-    
-       
-      <Button appearance="primary" size="regular" type="submit">
-        Search
-      </Button>
+          </Container>
+          <Button
+            appearance="primary"
+            size="regular"
+            type="submit"
+            disabled={true}
+          >
+            Search
+          </Button>
+        </div>
+      ) : (
+        <div>
+          {" "}
+          <ResourceCards
+            setOpen={params.setOpen}
+            resource={input}
+            showList={params.showList}
+            setZip={params.setZip}
+            setResource={params.setResource}
+            setResourceData={params.setResourceData}
+            setChildren={params.setChildren}
+          />
+        </div>
+      )}
     </div>
   );
 };

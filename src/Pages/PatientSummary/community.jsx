@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Button, Icon } from "@innovaccer/design-system";
 import Modal from "react-modal";
 import "@innovaccer/design-system/css";
 import image from "../../assets/community.png";
 import CommunityResources from "../CommunityResources";
+import ResourceList from "./ResourceList";
 
 const Heading = styled.h2`
   font-weight: var(--font-weight);
@@ -24,9 +25,29 @@ const customStyles = {
 };
 
 const Community = () => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [List, showList] = useState(false);
+  const [Resource, setResource] = useState("");
+  const [Zip, setZip] = useState("");
+  const [ResourceData, setResourceData] = useState([]);
+  const [Children, setChildren] = useState(0);
 
-  return (
+  console.log(
+    "list: ",
+    List,
+    " Resource: ",
+    Resource,
+    " Zip: ",
+    Zip,
+    " ResourceData: ",
+    ResourceData,
+    "Children: ",
+    Children
+  );
+
+  return List ? (
+    <ResourceList ResourceData={ResourceData} Zip={Zip} Children={Children}/>
+  ) : (
     <div className="w-100 p-8" style={{ textAlign: "center" }}>
       <Heading> Community Resources</Heading>
       <p>
@@ -47,7 +68,14 @@ const Community = () => {
           <div></div>{" "}
           <Icon size={20} name="close" onClick={() => setOpen(false)}></Icon>
         </div>
-        <CommunityResources />
+        <CommunityResources
+          setOpen={setOpen}
+          showList={showList}
+          setZip={setZip}
+          setResource={setResource}
+          setResourceData={setResourceData}
+          setChildren={setChildren}
+        />
       </Modal>
     </div>
   );

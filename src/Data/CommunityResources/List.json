@@ -1,0 +1,425 @@
+{
+  "data": [
+    {
+      "name": "1234Test",
+      "source": "ACO",
+      "description": "Test 1234",
+      "nameDescription": "",
+      "websiteLinks": [],
+      "categories": [
+        {
+          "id": "5e7daf8d390101119568075f",
+          "children": [],
+          "value": "Food",
+          "label": "Food"
+        }
+      ],
+      "populationFocus": [],
+      "eligibilityCriteria": [],
+      "updatedOn": 1623757579100,
+      "updatedBy": {
+        "firstName": "Abhishek",
+        "middleName": "",
+        "lastName": "Singh",
+        "userId": "776dc25f-d687-4aef-b2e3-2ca24af9f888",
+        "status": "Active"
+      },
+      "createdOn": 1586162806207,
+      "createdBy": {
+        "firstName": "Erin",
+        "middleName": "",
+        "lastName": "Carter",
+        "userId": "user_57",
+        "status": "Locked"
+      },
+      "active": true,
+      "resourceId": "5e8aec7639010174e838658d",
+      "id": "5e8aec7639010174e838658d",
+      "upVotes": 0,
+      "downVotes": 0,
+      "resourceType": "COMMUNITY_RESOURCE",
+      "facilities": [
+        {
+          "resourceId": "5e8aec7639010174e838658d",
+          "address": "Facility 1",
+          "phoneNumbers": [{ "value": "123456", "type": "WORK" }],
+          "emailIds": [],
+          "operationalTimings": [
+            {
+              "opensOn": 27000,
+              "closesOn": 63000,
+              "day": "Monday",
+              "status": "OPEN"
+            },
+            {
+              "opensOn": null,
+              "closesOn": null,
+              "status": "CLOSED",
+              "day": "Tuesday"
+            },
+            {
+              "opensOn": null,
+              "closesOn": null,
+              "status": "CLOSED",
+              "day": "Wednesday"
+            },
+            {
+              "opensOn": null,
+              "closesOn": null,
+              "status": "CLOSED",
+              "day": "Thursday"
+            },
+            {
+              "opensOn": null,
+              "closesOn": null,
+              "status": "CLOSED",
+              "day": "Friday"
+            },
+            {
+              "opensOn": null,
+              "closesOn": null,
+              "status": "CLOSED",
+              "day": "Saturday"
+            },
+            {
+              "opensOn": null,
+              "closesOn": null,
+              "status": "CLOSED",
+              "day": "Sunday"
+            }
+          ],
+          "zipCodes": ["NATIONWIDE"]
+        }
+      ],
+      "isClosedLoop": false
+    },
+    {
+      "resourceId": "5e579138f4a80960275350dc",
+      "name": "Free and Reduced School Lunches",
+      "source": "ACO",
+      "description": "View website for eligibility information and links to state contacts",
+      "nameDescription": null,
+      "categories": [
+        {
+          "id": "5e7daf8d390101119568075f",
+          "children": [],
+          "value": "Food",
+          "label": "Food"
+        },
+        {
+          "id": "5e7daf8d390101119568076a",
+          "children": [
+            {
+              "id": "5e7daf8d390101119568075e",
+              "value": "All Resources",
+              "label": "All Resources"
+            }
+          ],
+          "value": "All Resources",
+          "label": "All Resources"
+        }
+      ],
+      "populationFocus": ["Youth"],
+      "updatedOn": 1585838277747,
+      "updatedBy": {
+        "firstName": "Erin",
+        "middleName": "",
+        "lastName": "Carter",
+        "userId": "user_57",
+        "status": "Locked"
+      },
+      "createdOn": 1582816914128,
+      "createdBy": null,
+      "active": true,
+      "websiteLinks": [
+        "https://www.fns.usda.gov/school-meals/applying-free-and-reduced-price-school-meals"
+      ],
+      "id": "5e579138f4a80960275350dc",
+      "upVotes": 0,
+      "downVotes": 0,
+      "resourceType": "COMMUNITY_RESOURCE",
+      "eligibilityCriteria": [],
+      "facilities": [
+        {
+          "resourceId": "5e579138f4a80960275350dc",
+          "address": "NA",
+          "phoneNumbers": [],
+          "emailIds": [],
+          "zipCodes": ["NATIONWIDE"],
+          "operationalTimings": []
+        }
+      ],
+      "isClosedLoop": false
+    },
+    {
+      "resourceId": "5e579138f4a80960275350dd",
+      "name": "GA Foods (Sunmeadow)",
+      "source": "ACO",
+      "description": "Home delivered meals. Service is available through area agencies on aging and managed care organizations. GA doesn't sell directly to individuals.",
+      "nameDescription": "Eligibility Criteria: Area Agencies on Aging will determine eligibility for home delivered meals",
+      "categories": [
+        {
+          "id": "5e7daf8d390101119568075f",
+          "children": [],
+          "value": "Food",
+          "label": "Food"
+        },
+        {
+          "id": "5e7daf8d390101119568076a",
+          "children": [
+            {
+              "id": "5e7daf8d390101119568075e",
+              "value": "All Resources",
+              "label": "All Resources"
+            }
+          ],
+          "value": "All Resources",
+          "label": "All Resources"
+        }
+      ],
+      "populationFocus": ["Seniors"],
+      "updatedOn": 1585838283729,
+      "updatedBy": {
+        "firstName": "Erin",
+        "middleName": "",
+        "lastName": "Carter",
+        "userId": "user_57",
+        "status": "Locked"
+      },
+      "createdOn": 1582816914129,
+      "createdBy": null,
+      "active": true,
+      "websiteLinks": ["http://www.sunmeadow.com"],
+      "id": "5e579138f4a80960275350dd",
+      "upVotes": 0,
+      "downVotes": 0,
+      "resourceType": "COMMUNITY_RESOURCE",
+      "eligibilityCriteria": [],
+      "facilities": [
+        {
+          "resourceId": "5e579138f4a80960275350dd",
+          "address": "NA",
+          "phoneNumbers": [{ "value": "1-800-677-1116", "type": "WORK" }],
+          "emailIds": [],
+          "zipCodes": ["NATIONWIDE"],
+          "operationalTimings": []
+        }
+      ],
+      "isClosedLoop": false
+    },
+    {
+      "resourceId": "5e579138f4a80960275350e7",
+      "name": "Mom's Meals",
+      "source": "ACO",
+      "description": "Home delivered meals",
+      "nameDescription": null,
+      "categories": [
+        {
+          "id": "5e7daf8d390101119568075f",
+          "children": [],
+          "value": "Food",
+          "label": "Food"
+        },
+        {
+          "id": "5e7daf8d390101119568076a",
+          "children": [
+            {
+              "id": "5e7daf8d390101119568075e",
+              "value": "All Resources",
+              "label": "All Resources"
+            }
+          ],
+          "value": "All Resources",
+          "label": "All Resources"
+        }
+      ],
+      "populationFocus": [],
+      "updatedOn": 1585838590303,
+      "updatedBy": {
+        "firstName": "Erin",
+        "middleName": "",
+        "lastName": "Carter",
+        "userId": "user_57",
+        "status": "Locked"
+      },
+      "createdOn": 1582816914133,
+      "createdBy": null,
+      "active": true,
+      "websiteLinks": ["http://www.momsmeals.com"],
+      "id": "5e579138f4a80960275350e7",
+      "upVotes": 0,
+      "downVotes": 0,
+      "resourceType": "COMMUNITY_RESOURCE",
+      "eligibilityCriteria": [],
+      "facilities": [
+        {
+          "resourceId": "5e579138f4a80960275350e7",
+          "address": "3210 Southeast Corporate Woods Dr., Ankeny, IA 50021",
+          "phoneNumbers": [{ "value": "877-508-6667", "type": "WORK" }],
+          "emailIds": [],
+          "zipCodes": ["NATIONWIDE"],
+          "operationalTimings": []
+        }
+      ],
+      "isClosedLoop": false
+    },
+    {
+      "name": "NY Foods",
+      "source": "ACO",
+      "description": "Description",
+      "nameDescription": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32",
+      "websiteLinks": [],
+      "categories": [
+        {
+          "id": "5e7daf8d390101119568075f",
+          "children": [],
+          "value": "Food",
+          "label": "Food"
+        }
+      ],
+      "populationFocus": [
+        "1",
+        "2",
+        "23",
+        "4",
+        "55",
+        "6",
+        "5",
+        "6'46",
+        "'4'6",
+        "45",
+        "54",
+        "65"
+      ],
+      "eligibilityCriteria": [
+        "23",
+        "23232",
+        "323232",
+        "3",
+        "232323",
+        "2323",
+        "2",
+        "32"
+      ],
+      "updatedOn": 1585838620720,
+      "updatedBy": {
+        "firstName": "Erin",
+        "middleName": "",
+        "lastName": "Carter",
+        "userId": "user_57",
+        "status": "Locked"
+      },
+      "createdOn": 1585752044953,
+      "createdBy": {
+        "firstName": "Erin",
+        "middleName": "",
+        "lastName": "Carter",
+        "userId": "user_57",
+        "status": "Locked"
+      },
+      "active": true,
+      "resourceId": "5e84a7ed39010150f4130fef",
+      "id": "5e84a7ed39010150f4130fef",
+      "upVotes": 0,
+      "downVotes": 0,
+      "resourceType": "COMMUNITY_RESOURCE",
+      "facilities": [
+        {
+          "resourceId": "5e84a7ed39010150f4130fef",
+          "address": "pin delhi, India",
+          "phoneNumbers": [
+            { "value": "+91-8118823422", "type": "WORK" },
+            { "value": "8123722222", "type": "WORK" }
+          ],
+          "emailIds": [],
+          "operationalTimings": [
+            {
+              "opensOn": 25140,
+              "closesOn": 25200,
+              "day": "Monday",
+              "status": "OPEN"
+            },
+            {
+              "opensOn": null,
+              "closesOn": null,
+              "status": "CLOSED",
+              "day": "Tuesday"
+            },
+            {
+              "opensOn": null,
+              "closesOn": null,
+              "status": "CLOSED",
+              "day": "Wednesday"
+            },
+            {
+              "opensOn": null,
+              "closesOn": null,
+              "status": "CLOSED",
+              "day": "Thursday"
+            },
+            {
+              "opensOn": null,
+              "closesOn": null,
+              "status": "CLOSED",
+              "day": "Friday"
+            },
+            {
+              "opensOn": null,
+              "closesOn": null,
+              "status": "CLOSED",
+              "day": "Saturday"
+            },
+            {
+              "opensOn": null,
+              "closesOn": null,
+              "status": "CLOSED",
+              "day": "Sunday"
+            }
+          ],
+          "zipCodes": ["12345"]
+        }
+      ],
+      "isClosedLoop": false
+    },
+    {
+      "name": "res 1",
+      "source": "ACO",
+      "description": "w",
+      "nameDescription": "",
+      "websiteLinks": [],
+      "categories": [
+        {
+          "id": "5e7daf8d390101119568075f",
+          "children": [],
+          "value": "Food",
+          "label": "Food"
+        }
+      ],
+      "populationFocus": [],
+      "eligibilityCriteria": [],
+      "updatedOn": 1592900916204,
+      "updatedBy": null,
+      "createdOn": 1592900916204,
+      "createdBy": null,
+      "active": true,
+      "resourceId": "5ef1bd343901017666afd567",
+      "id": "5ef1bd343901017666afd567",
+      "upVotes": 0,
+      "downVotes": 0,
+      "resourceType": "COMMUNITY_RESOURCE",
+      "facilities": [
+        {
+          "resourceId": "5ef1bd343901017666afd567",
+          "address": "",
+          "phoneNumbers": [],
+          "emailIds": [],
+          "operationalTimings": [],
+          "zipCodes": ["12345"]
+        }
+      ],
+      "isClosedLoop": false
+    }
+  ],
+  "metadata": { "count": 6 },
+  "page": { "next": null }
+}

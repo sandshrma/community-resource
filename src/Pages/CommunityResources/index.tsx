@@ -1,14 +1,12 @@
-import React , {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { Input, Icon, Radio} from "@innovaccer/design-system";
+import { Input, Icon, Radio } from "@innovaccer/design-system";
 import logo from "../../assets/aunt_bertha.png";
 import FindResource from "./FindResource";
 
 const Container = styled.div`
   text-align: left;
   width: 550px;
-  margin-left: auto;
-  margin-right: auto;
 `;
 const Heading = styled.div`
   font-size: var(--font-size-xl);
@@ -23,12 +21,14 @@ const InputWrapper = styled.div`
   width: 60px;
 `;
 
-const CommunityResources = () => {
+const CommunityResources = (params: any) => {
   const [inputValue, setInput] = useState("");
+  const [Zip, setZip] = useState("12345");
   console.log(inputValue);
+  params.setZip(Zip);
 
   return (
-    <Container>
+    <Container className="ml-auto mr-auto">
       <Heading className="pt-8 pb-8">Search Community Resources</Heading>
       <Subheading>
         Search on the basis of social needs such as Food, Housing, Education,
@@ -40,7 +40,14 @@ const CommunityResources = () => {
         <Icon appearance="subtle" name="info" size={18} className="pt-6 pl-4" />
       </div>
       <InputWrapper>
-        <Input icon="place" name="input" placeholder="Zip Code" />
+        <Input
+          icon="place"
+          name="input"
+          placeholder="Zip Code"
+          autoComplete="off"
+          value="12345"
+          onChange={(e) => setZip(e.target.value)}
+        />
       </InputWrapper>
       <br />
       <h3>Select Source</h3>
@@ -68,14 +75,25 @@ const CommunityResources = () => {
           className=" pr-8"
         />
         <div className="d-flex">
-          <Radio name="resources" value="Aunt Bertha" onChange={(e) => setInput(e.target.value)}/>
+          <Radio
+            name="resources"
+            value="Aunt Bertha"
+            onChange={(e) => setInput(e.target.value)}
+          />
 
           <img src={logo} alt="Aunt Bertha" height="15" className="p-2 pl-4" />
         </div>
       </div>
       <h3>Select Service</h3>
-     { FindResource(inputValue) }
-
+      <FindResource
+        setOpen={params.setOpen}
+        input={inputValue}
+        showList={params.showList}
+        setZip={params.setZip}
+        setResource={params.setResource}
+        setResourceData={params.setResourceData}
+        setChildren={params.setChildren}
+      />
     </Container>
   );
 };

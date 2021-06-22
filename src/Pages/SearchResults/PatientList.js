@@ -1,119 +1,102 @@
-import React, { useState } from "react";
-import { useStateValue } from "../../stateProvider";
-import GetData from "../../Data/GetData";
-import Patient from "./Patient.js";
-import { useHistory } from "react-router-dom";
-import { actionTypes } from "../../Reducer";
-import { Input, Button } from "@innovaccer/design-system";
+import React, { useState, useEffect } from "react";
+// import { useStateValue } from "../../stateProvider";
+// import GetData from "../../data/GetData";
+import Patient from "./Patient";
 import "@innovaccer/design-system/css";
 import styled from "styled-components";
+// import SearchBar from "../../components/Search";
+import { Placeholder, PlaceholderParagraph } from "@innovaccer/design-system";
 
-const Body = styled.div`
-  width: 1470px;
+// const Body = styled.div`
+//   width: 1470px;
+// `;
+
+// const Upper = styled.div`
+//   height: 100px;
+//   background-color: var(--secondary-lightest);
+// `;
+
+// const List = styled.div`
+//   padding: 15px;
+// `;
+const LoaderConatiner = styled.div`
+  border-bottom: var(--border);
 `;
 
-const Upper = styled.div`
-  height: 100px;
-  background-color: var(--secondary-lightest);
-`;
+const Patients = ({ data }) => {
+  // const [{ term }] = useStateValue();
+  const [isLoaded, setIsLoaded] = useState(false);
 
-const Container = styled.div`
-  margin-top: 15px;
-`;
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 1500);
+  }, []);
 
-const List = styled.div`
-  padding: 15px;
-`;
+  if (isLoaded === true) {
+    // const data = GetData();
+    // const filtered_data = data.data.data.filter((patient_data) => {
+    //   //change to data.data in case of api call
+    //   const joined = (
+    //     patient_data.dob +
+    //     " " +
+    //     patient_data.empi +
+    //     " " +
+    //     patient_data.firstName +
+    //     " " +
+    //     patient_data.middleName +
+    //     " " +
+    //     patient_data.lastName
+    //   ).toLowerCase();
+    //   return joined.includes(term.toLowerCase());
+    // });
+    // console.log(filtered_data.length);
 
-const InputWrapper = styled.div`
-  width: 360px;
-  margin-right: 10px;
-`;
-
-const MarginV = styled.div`
-  height: 100px;
-  position: sticky;
-`;
-
-const Patients = () => {
-  const history = useHistory();
-  const [inputValue, setInput] = useState("");
-
-  const search = (e) => {
-    e.preventDefault();
-    dispatch({
-      type: actionTypes.SET_SEARCH_TERM,
-      term: inputValue,
-    });
-    history.push(`/search`);
-  };
-
-  const [{ term }, dispatch] = useStateValue();
-  const data = GetData();
-   const filtered_data = data.data.data.filter((patient_data) => {              //change to data.data in case of api call
-     const joined = (
-       patient_data.dob +
-       " " +
-       patient_data.empi +
-       " " +
-       patient_data.firstName +
-       " " +
-       patient_data.middleName +
-       " " +
-       patient_data.lastName
-     ).toLowerCase();
-     return joined.includes(term.toLowerCase());
-   });
-
-  return (
-    <Body>
-      <Upper className="position-fixed overflow-hidden w-100 pt-4 pl-4 pr-4">
-        <Container className=".m-14 d-flex">
-          <InputWrapper>
-            <Input
-              icon="search"
-              name="input"
-              placeholder="Search by Patients's Name, EMPI or DOB"
-              size="regular"
-              className="bg-light"
-              value={inputValue}
-              onChange={(e) => {
-                setInput(e.target.value);
-              }}
-            />
-          </InputWrapper>
-          <Button
-            appearance="primary"
-            size="regular"
-            type="submit"
-            onClick={search}
-            className="mr-4"
-          >
-            Search Patient
-          </Button>
-
-          <Button appearance="basic" size="regular" icon="keyboard_arrow_down">
-            Advanced Search
-          </Button>
-        </Container>
-        <h3>Search results for "{term}"</h3>
-      </Upper>
-      <MarginV />
-
-      <List>
-        {filtered_data.map((patient) => {
-          return (
-            <Patient
-              key={patient.empi}
-              data={patient}
-            ></Patient>
-          );
+    return (
+      // <Body className="d-table">
+      //   <Upper className="position-fixed overflow-hidden w-100 pt-4 pl-7 pr-4">
+      //     <SearchBar type="Other" />
+      //     <h3>Search results for "{term}"</h3>
+      //   </Upper>
+      //   <List className="mt-11 ml-4">
+      <div>
+        {data.map((patient) => {
+          return <Patient key={patient.empi} data={patient}></Patient>;
         })}
-      </List>
-    </Body>
-  );
+      </div>
+      //     <Button
+      //         size="large"
+      //         type="submit"
+      //       >
+      //         Load More Results
+      //       </Button>
+      //   </List>
+      // </Body>
+    );
+  } else {
+    const n = 15;
+    return (
+      // <Body className="d-table">
+      //   <Upper className="position-fixed overflow-hidden w-100 pt-4 pl-7 pr-4">
+      //     <SearchBar type="Other" />
+      //     <PlaceholderParagraph length="small" className="py-6" />
+      //   </Upper>
+      //   <List className="mt-11 ml-4">
+      <div>
+        {[...Array(n)].map(() => (
+          <LoaderConatiner>
+            <Placeholder withImage={false} className="p-6 bg-light w-100">
+              <PlaceholderParagraph length="small" />
+              <PlaceholderParagraph />
+            </Placeholder>
+          </LoaderConatiner>
+        ))}
+      </div>
+      //   </List>
+      // </Body>
+    );
+  }
 };
 export default Patients;
-
 
 /*<Icon size={50} name='block' appearance="alert"/> */

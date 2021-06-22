@@ -1,8 +1,7 @@
-// import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 // import axios from "axios";
-import data from './Data.json';
-
-
+//import { resolve } from 'dns';
+import data from "./Data.json";
 
 const GetData = () => {
   // const [data, setData] = useState([]);
@@ -16,6 +15,12 @@ const GetData = () => {
   //     })
   //     .catch((error) => console.log(error));
   // }, []);
-  return { data};
+  return { data };
+
+  // return new Promise((resolve)=>{
+  //   setTimeout(()=>{
+  //     return({data});
+  //   },1000);
+  // })
 };
 export default GetData;

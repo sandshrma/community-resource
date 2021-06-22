@@ -12,46 +12,31 @@ import {
   MdLocalHospital,
 } from "react-icons/md";
 
-const Icon=({type})=>{
-
-    if(type==="Food"){
-        return (<MdRoomService/>);
-    }
-    else if(type==="Care"){
-        return (<MdSpa/>);
-    }
-    else if(type==="Money"){
-        return <MdAttachMoney/>
-    }
-    else if(type==="Education"){
-        return <MdSchool/>
-    }
-    else if(type==="Work"){
-        return <MdBusinessCenter/>
-    }
-    else if(type==="Emergency"){
-        return <MdInfo/>
-    }
-    else if(type==="Legal"){
-        return <MdGavel/>
-    }
-    else if(type==="Housing"){
-        return <MdHome/>
-    }
-    else if(type==="Goods"){
-        return <MdLocalMall/>
-    }
-    else if(type==="Transit"){
-        return <MdDirectionsCar/>
-    }
-    else if(type==="Health"){
-        return <MdLocalHospital/>
-    }
-    else{
-        return <MdInfo/>
-    }
-    
-    
-
-}
+const Icon = ({ type }) => {
+  if (type === "Food") {
+    return <MdRoomService size={25} />;
+  } else if (type === "Care") {
+    return <MdSpa size={25} />;
+  } else if (type === "Money") {
+    return <MdAttachMoney size={25} />;
+  } else if (type === "Education") {
+    return <MdSchool size={25} />;
+  } else if (type === "Work") {
+    return <MdBusinessCenter size={25} />;
+  } else if (type === "Emergency") {
+    return <MdInfo size={25} />;
+  } else if (type === "Legal") {
+    return <MdGavel size={25} />;
+  } else if (type === "Housing") {
+    return <MdHome size={25} />;
+  } else if (type === "Goods") {
+    return <MdLocalMall size={25} />;
+  } else if (type === "Transit") {
+    return <MdDirectionsCar size={25} />;
+  } else if (type === "Health") {
+    return <MdLocalHospital size={25} />;
+  } else {
+    return <MdInfo size={25} />;
+  }
+};
 export default Icon;

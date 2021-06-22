@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Icon } from "@innovaccer/design-system";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavigationWrapper = styled.nav`
   top: 0;
@@ -28,7 +28,6 @@ const NavElement = styled.text`
 `;
 const Navigation = () => {
   return (
-    
     <NavigationWrapper className="position-sticky d-flex w-100 justify-content-between bg-light ">
       <Align>
         <NavElement>
@@ -43,11 +42,9 @@ const Navigation = () => {
         </NavElement>
         <NavElement>Data</NavElement>
         <NavElement>DAP</NavElement>
-        <Link
-            to={{ pathname: "/" }}
-            style={{ textDecoration: "none" }}
-          >
-        <NavElement >Patients</NavElement></Link>
+        <Link to={{ pathname: "/" }} style={{ textDecoration: "none" }}>
+          <NavElement>Patients</NavElement>
+        </Link>
         <NavElement>Analytics</NavElement>
         <NavElement>Care Management</NavElement>
         <NavElement>Outreach</NavElement>
@@ -55,15 +52,12 @@ const Navigation = () => {
         <NavElement>User Admin</NavElement>
         <NavElement>Settings</NavElement>
         <NavElement>More</NavElement>
-
       </Align>
       <Align>
         <NavElement>Help</NavElement>
         <NavElement>Username</NavElement>
       </Align>
-      
     </NavigationWrapper>
-    
   );
 };
 export default Navigation;

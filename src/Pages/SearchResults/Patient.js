@@ -1,15 +1,8 @@
 import styled from "styled-components";
 import "@innovaccer/design-system/css";
 import { Link } from "react-router-dom";
-import {
-  fullName,
-  Payer,
-  phoneNumber,
-  reStructure,
-  light,
-  pair,
-  dropdown,
-} from "../../helper";
+import { fullName, Payer, phoneNumber, reStructure } from "../../helper";
+import { light, pair, dropdown } from "../../components/CommonStyle";
 
 const Container = styled.div`
   text-align: left;
@@ -59,10 +52,10 @@ const Dot = styled.div`
   margin-top: 7px;
 `;
 
-const Patient = ({data}) => {
+const Patient = ({ data }) => {
   const fullname = fullName(data.firstName, data.middleName, data.lastName);
-  const payer = Payer(data.payers);
-  const phone_number = reStructure(phoneNumber(data.phone_number));
+  const payer = Payer(data.payers, "list");
+  const phone_number = reStructure(phoneNumber(data.phone_number, "list"));
 
   return (
     <Container className="w-100 bg-light p-5">
@@ -70,25 +63,35 @@ const Patient = ({data}) => {
         <Layer className="my-3">
           {" "}
           <Link
-            to={{ pathname: "/summary", state:{data} }}
+            to={{ pathname: "/summary", state: { data } }}
             style={{ textDecoration: "none" }}
           >
             <Name>{fullname}</Name>
           </Link>
-           {light(data.age, data.gender)} <Empi className=" ml-4 pl-3 pr-3">{data.empi}</Empi>{" "} 
+          {light(data.age, data.gender)}{" "}
+          <Empi className=" ml-4 pl-3 pr-3">{data.empi}</Empi>{" "}
         </Layer>
         <Layer>
           {pair("DOB", data.dob)} <Dot />{" "}
-          {pair(data.attribution[0].display_name, data.attribution[0].value)} <Dot />
+          {pair(data.attribution[0].display_name, data.attribution[0].value)}{" "}
+          <Dot />
           {pair(data.attribution[1].display_name, data.attribution[1].value)}
           <Dot /> {pair("Payer", payer)} <Dot />
           {pair("Ph", phone_number)}
           {dropdown(data.phone_number)}
         </Layer>
         <Layer>
-          {data.is_deceased ? <Deceased className="p-3 mr-4 mt-4">DECEASED</Deceased> : <div/>}
-          {data.has_legal_hold ? <LegalHold className="p-3 mt-4">LEGAL HOLD</LegalHold> : <div />}
-        </Layer> 
+          {data.is_deceased ? (
+            <Deceased className="p-3 mr-4 mt-4">DECEASED</Deceased>
+          ) : (
+            <div />
+          )}
+          {data.has_legal_hold ? (
+            <LegalHold className="p-3 mt-4">LEGAL HOLD</LegalHold>
+          ) : (
+            <div />
+          )}
+        </Layer>
       </Information>
     </Container>
   );
