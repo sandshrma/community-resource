@@ -8,6 +8,17 @@ export const date = (date) => {
 function capitalize(str) {
   return str[0].toUpperCase() + str.slice(1);
 }
+export const populationFocus=(focus)=>{
+  return(
+    (focus.length===0 || focus[0]==="") ?'NA':focus[0]
+  );
+}
+  
+export const address=(address)=>{
+  return(
+    address===""? 'NA' : address
+  )
+}
 
 export const fullName = (firstName, middleName, lastName) => {
   var fullName = "";
@@ -32,8 +43,11 @@ export const phoneNumber = (phone, source) => {
   var PhoneNumber;
   if (phone.length === 0) {
     if (source === "list") PhoneNumber = "not-available";
+    if(source==="refer") PhoneNumber="NA";
     else PhoneNumber = "-";
-  } else {
+  } 
+  else if(source==="refer") PhoneNumber = phone[0].value;
+  else {
     PhoneNumber = phone[0].phone_number;
   }
 
@@ -41,8 +55,9 @@ export const phoneNumber = (phone, source) => {
 };
 
 export const reStructure = (PhoneNumber) => {
-  if (PhoneNumber === "not-available" || PhoneNumber === "-")
+  if (PhoneNumber === "not-available" || PhoneNumber === "-" || PhoneNumber === "NA")
     return PhoneNumber;
+    if(PhoneNumber.length>6)
   PhoneNumber =
     "(" +
     PhoneNumber.slice(0, 3) +
@@ -50,6 +65,12 @@ export const reStructure = (PhoneNumber) => {
     PhoneNumber.slice(3, 6) +
     "-" +
     PhoneNumber.slice(6);
-
+    else{
+      PhoneNumber =
+    "(" +
+    PhoneNumber.slice(0, 3) +
+    ") " +
+    PhoneNumber.slice(3)
+    }
   return PhoneNumber;
 };

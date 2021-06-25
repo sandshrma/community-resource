@@ -12,7 +12,10 @@ import {
   MdLocalHospital,
 } from "react-icons/md";
 
-const Icon = ({ type }) => {
+type IconType={
+  type:string;
+} 
+const Icon = ({ type }:IconType) => {
   if (type === "Food") {
     return <MdRoomService size={25} />;
   } else if (type === "Care") {

@@ -1,31 +1,41 @@
 import React, { useState, useEffect } from "react";
-// import { useStateValue } from "../../stateProvider";
-// import GetData from "../../data/GetData";
 import Patient from "./Patient";
 import "@innovaccer/design-system/css";
 import styled from "styled-components";
-// import SearchBar from "../../components/Search";
-import { Placeholder, PlaceholderParagraph } from "@innovaccer/design-system";
+import {
+  Placeholder,
+  PlaceholderParagraph,
+  Button,
+} from "@innovaccer/design-system";
 
-// const Body = styled.div`
-//   width: 1470px;
-// `;
-
-// const Upper = styled.div`
-//   height: 100px;
-//   background-color: var(--secondary-lightest);
-// `;
-
-// const List = styled.div`
-//   padding: 15px;
-// `;
 const LoaderConatiner = styled.div`
   border-bottom: var(--border);
 `;
+let array = [];
 
 const Patients = ({ data }) => {
-  // const [{ term }] = useStateValue();
   const [isLoaded, setIsLoaded] = useState(false);
+  const [ToShow, setToShow] = useState([]);
+  const [Next, setNext] = useState(50);
+  const [patients, setPatients] = useState([]);
+
+  const loopWithSlice = (start, end) => {
+    const slicedPosts = data.slice(start, end);
+    array = [...array, ...slicedPosts];
+    setPatients(array);
+    setToShow(array);
+  };
+  console.log(array);
+
+  useEffect(() => {
+    array = [];
+    loopWithSlice(0, 50);
+  }, []);
+
+  function showMore() {
+    loopWithSlice(Next, Next + 50);
+    setNext(Next + 50);
+  }
 
   useEffect(() => {
     setTimeout(() => {
@@ -34,54 +44,26 @@ const Patients = ({ data }) => {
   }, []);
 
   if (isLoaded === true) {
-    // const data = GetData();
-    // const filtered_data = data.data.data.filter((patient_data) => {
-    //   //change to data.data in case of api call
-    //   const joined = (
-    //     patient_data.dob +
-    //     " " +
-    //     patient_data.empi +
-    //     " " +
-    //     patient_data.firstName +
-    //     " " +
-    //     patient_data.middleName +
-    //     " " +
-    //     patient_data.lastName
-    //   ).toLowerCase();
-    //   return joined.includes(term.toLowerCase());
-    // });
-    // console.log(filtered_data.length);
-
     return (
-      // <Body className="d-table">
-      //   <Upper className="position-fixed overflow-hidden w-100 pt-4 pl-7 pr-4">
-      //     <SearchBar type="Other" />
-      //     <h3>Search results for "{term}"</h3>
-      //   </Upper>
-      //   <List className="mt-11 ml-4">
       <div>
-        {data.map((patient) => {
+        {patients.map((patient) => {
           return <Patient key={patient.empi} data={patient}></Patient>;
         })}
+        <div className="bg-light p-5 w-100">
+          <Button
+            size="medium"
+            type="submit"
+            onClick={showMore}
+            className="ml-auto mr-auto"
+          >
+            Load More Results
+          </Button>
+        </div>
       </div>
-      //     <Button
-      //         size="large"
-      //         type="submit"
-      //       >
-      //         Load More Results
-      //       </Button>
-      //   </List>
-      // </Body>
     );
   } else {
     const n = 15;
     return (
-      // <Body className="d-table">
-      //   <Upper className="position-fixed overflow-hidden w-100 pt-4 pl-7 pr-4">
-      //     <SearchBar type="Other" />
-      //     <PlaceholderParagraph length="small" className="py-6" />
-      //   </Upper>
-      //   <List className="mt-11 ml-4">
       <div>
         {[...Array(n)].map(() => (
           <LoaderConatiner>
@@ -92,11 +74,7 @@ const Patients = ({ data }) => {
           </LoaderConatiner>
         ))}
       </div>
-      //   </List>
-      // </Body>
     );
   }
 };
 export default Patients;
-
-/*<Icon size={50} name='block' appearance="alert"/> */

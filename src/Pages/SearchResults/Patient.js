@@ -51,7 +51,6 @@ const Dot = styled.div`
   margin: 4px;
   margin-top: 7px;
 `;
-
 const Patient = ({ data }) => {
   const fullname = fullName(data.firstName, data.middleName, data.lastName);
   const payer = Payer(data.payers, "list");

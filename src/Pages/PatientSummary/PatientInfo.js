@@ -7,7 +7,7 @@ const PatientInfo = () => {
   const { state } = useLocation();
   return (
     <div>
-      {Header(state)}
+      <Header data={state.data}/>
       <div className="d-flex p-3">
         <VerticalNavigation />
       </div>

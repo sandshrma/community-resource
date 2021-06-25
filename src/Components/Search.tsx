@@ -42,8 +42,6 @@ const SearchBar = ({ type }: Pagetype) => {
 
   const search = (e: any) => {
     e.preventDefault();
-    console.log(inputValue);
-
     dispatch({
       type: actionTypes.SET_SEARCH_TERM,
       term: inputValue,
@@ -72,7 +70,7 @@ const SearchBar = ({ type }: Pagetype) => {
             <Button
               appearance="primary"
               size="large"
-              type="submit"
+              type="button"
               onClick={search}
             >
               Search Patient

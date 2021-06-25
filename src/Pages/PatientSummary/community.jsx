@@ -46,7 +46,7 @@ const Community = () => {
   );
 
   return List ? (
-    <ResourceList ResourceData={ResourceData} Zip={Zip} Children={Children}/>
+    <ResourceList ResourceData={ResourceData} Zip={Zip} Children={Children} showList={showList}/>
   ) : (
     <div className="w-100 p-8" style={{ textAlign: "center" }}>
       <Heading> Community Resources</Heading>

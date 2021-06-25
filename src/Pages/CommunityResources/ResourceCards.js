@@ -23,7 +23,7 @@ const Card1 = styled.div`
 
 const ResourceCards = (params) => {
   const [ShowChildren, setShowChildren] = useState(true);
-  const [Index, setIndex] = useState(0);
+  const [Index, setIndex] = useState(-1);
   const [Disabled, setDisabled] = useState(true);
   const resource = params.resource;
   const show = () => {
@@ -46,12 +46,16 @@ const ResourceCards = (params) => {
               <Card1
                 shadow="none"
                 className="p-3"
+                style={{
+                  color: Index=== index ? "#0070DD" : ""
+                }}
                 onClick={() => {
                   setIndex(index);
                   setDisabled(false);
                   params.setResourceData(resource_type);
                   params.setChildren(-1);
-                }}
+                }  
+              }
               >
                 <div className="align-middle pl-8 pt-6">
                   <div className="pl-6">
