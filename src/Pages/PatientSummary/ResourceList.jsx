@@ -1,12 +1,12 @@
 import React from "react";
-import { data } from "../../data/CommunityResources/List.json";
+import { data } from "data/CommunityResources/List.json";
 import styled from "styled-components";
 import {
   Input,
   Icon,
   Dropdown,
   Caption,
-  Button
+  Button,
 } from "@innovaccer/design-system";
 import ResourceCard from "./ResourceCard";
 
@@ -29,7 +29,8 @@ const ResourceList = (params) => {
     <div className="w-100 p-4 pl-8">
       <div className="d-flex ">
         {/* <Button onClick={params.showList(false)}> */}
-        <Icon size={20} name="arrow_backward"/>{/* </Button> */}
+        <Icon size={20} name="arrow_backward" />
+        {/* </Button> */}
         <Heading className="ml-6 pt-0 mt-0">Community Resources</Heading>{" "}
       </div>
       <div className="d-flex justify-content-start">
@@ -59,17 +60,15 @@ const ResourceList = (params) => {
         </InputContainer>
       </div>
       <Caption className="m-5">
-        {params.ResourceData.label + " / " + params.ResourceData.children[params.Children].label}
+        {params.ResourceData.label +
+          " / " +
+          params.ResourceData.children[params.Children].label}
       </Caption>
       <SubHeading className="ml-5">{data.length + " "} RESOURCES</SubHeading>
       <div className="ml-4 mt-6 mr-8">
-      {
-        data.map((resource)=>{
-          return(
-            <ResourceCard key={data.id} data={resource} />
-          );
-        })   
-      }
+        {data.map((resource) => {
+          return <ResourceCard key={data.id} data={resource} />;
+        })}
       </div>
     </div>
   );

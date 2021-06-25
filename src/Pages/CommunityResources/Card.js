@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "@innovaccer/design-system";
 import "@innovaccer/design-system/css";
-import Icon from "../../Components/ResourceIcons";
+import Icon from "components/ResourceIcons";
 
 const ResourceCard = ({ resource, count }) => {
   const show = () => {};

@@ -1,8 +1,8 @@
 import React from "react";
 import "@innovaccer/design-system/css";
 import styled from "styled-components";
-import SearchBar from "../components/Search";
-import logo from "../assets/search_home.png";
+import SearchBar from "components/Search";
+import logo from "assets/search_home.png";
 
 const ImageContainer = styled.img`
   height: 75px;

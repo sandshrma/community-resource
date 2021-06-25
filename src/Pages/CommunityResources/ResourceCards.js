@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import dataInternal from "../../data/CommunityResources/Internal.json";
-import dataPartner from "../../data/CommunityResources/Partner-resources.json";
-import dataAuntBertha from "../../data/CommunityResources/AuntBertha.json";
+import dataInternal from "data/CommunityResources/Internal.json";
+import dataPartner from "data/CommunityResources/Partner-resources.json";
+import dataAuntBertha from "data/CommunityResources/AuntBertha.json";
 import { Radio, Button } from "@innovaccer/design-system";
 import styled from "styled-components";
-import Icon from "../../components/ResourceIcons";
+import Icon from "components/ResourceIcons";
 
 const Grid = styled.div`
   display: grid;
@@ -47,15 +47,14 @@ const ResourceCards = (params) => {
                 shadow="none"
                 className="p-3"
                 style={{
-                  color: Index=== index ? "#0070DD" : ""
+                  color: Index === index ? "#0070DD" : "",
                 }}
                 onClick={() => {
                   setIndex(index);
                   setDisabled(false);
                   params.setResourceData(resource_type);
                   params.setChildren(-1);
-                }  
-              }
+                }}
               >
                 <div className="align-middle pl-8 pt-6">
                   <div className="pl-6">
@@ -104,8 +103,10 @@ const ResourceCards = (params) => {
             </Button>
             {data.nodes[Index].children.map((resource_type, index) => {
               return (
-                <div className="ml-9 d-flex p-3" style={{ width: "300px", fontWeight:"700"}}>
-                  
+                <div
+                  className="ml-9 d-flex p-3"
+                  style={{ width: "300px", fontWeight: "700" }}
+                >
                   <Radio
                     label={resource_type.label}
                     name="subresources"
@@ -116,7 +117,6 @@ const ResourceCards = (params) => {
                     }}
                   />
                   ({resource_type.count})
-                  
                 </div>
               );
             })}

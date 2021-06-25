@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import "@innovaccer/design-system/css";
-import { reStructure } from "../helper";
+import { reStructure } from "helper";
 
 const LightText = styled.div`
   color: var(--inverse-lighter);

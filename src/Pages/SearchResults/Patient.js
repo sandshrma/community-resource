@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import "@innovaccer/design-system/css";
 import { Link } from "react-router-dom";
-import { fullName, Payer, phoneNumber, reStructure } from "../../helper";
-import { light, pair, dropdown } from "../../components/CommonStyle";
+import { fullName, Payer, phoneNumber, reStructure } from "helper";
+import { light, pair, dropdown } from "components/CommonStyle";
 
 const Container = styled.div`
   text-align: left;

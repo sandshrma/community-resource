@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Input, Icon, Radio } from "@innovaccer/design-system";
-import logo from "../../assets/aunt_bertha.png";
+import logo from "assets/aunt_bertha.png";
 import FindResource from "./FindResource";
 
 const Container = styled.div`

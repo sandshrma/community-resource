@@ -1,11 +1,9 @@
-import { useState, useEffect } from "react";
+//import React, { useState, useEffect } from "react";
 // import axios from "axios";
 import data from "./Data.json";
 
-const GetData = (term,next) => {
-  const [loading,isLoading]=useState(true);
-  const [Data,setData]=useState([]);
-  console.log("Get Data called")
+const GetData = () => {
+  console.log("Get Data called");
   // const [data, setData] = useState([]);
   // useEffect(() => {
   //   axios
@@ -17,20 +15,6 @@ const GetData = (term,next) => {
   //     })
   //     .catch((error) => console.log(error));
   // }, []);
-
-  // console.log(abc);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     isLoading(false);
-  //   }, 1000);
-  // }, []);
-  // return [abc,loading];
-
-  // return new Promise((resolve)=>{
-  //   setTimeout(()=>{
-  //     return({data});
-  //   },1000);
-  // })
-  return {data};
+  return { data };
 };
 export default GetData;

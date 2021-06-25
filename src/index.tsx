@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./app/App";
-import reportWebVitals from "./reportWebVitals";
-import reducer, { initialState } from "./Reducer";
-import { StateProvider } from "./stateProvider";
+import "index.css";
+import App from "app/App";
+import reportWebVitals from "reportWebVitals";
+import reducer, { initialState } from "Reducer";
+import { StateProvider } from "stateProvider";
 import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(

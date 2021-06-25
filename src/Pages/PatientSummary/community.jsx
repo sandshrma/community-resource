@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Button, Icon } from "@innovaccer/design-system";
 import Modal from "react-modal";
 import "@innovaccer/design-system/css";
-import image from "../../assets/community.png";
+import image from "assets/community.png";
 import CommunityResources from "../CommunityResources";
 import ResourceList from "./ResourceList";
 
@@ -46,7 +46,12 @@ const Community = () => {
   );
 
   return List ? (
-    <ResourceList ResourceData={ResourceData} Zip={Zip} Children={Children} showList={showList}/>
+    <ResourceList
+      ResourceData={ResourceData}
+      Zip={Zip}
+      Children={Children}
+      showList={showList}
+    />
   ) : (
     <div className="w-100 p-8" style={{ textAlign: "center" }}>
       <Heading> Community Resources</Heading>

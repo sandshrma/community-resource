@@ -3,9 +3,9 @@ import "@innovaccer/design-system/css";
 import { Input, Button } from "@innovaccer/design-system";
 import styled from "styled-components";
 import "react-dropdown/style.css";
-import { useStateValue } from "../stateProvider";
+import { useStateValue } from "stateProvider";
 import { useHistory } from "react-router-dom";
-import { actionTypes } from "../Reducer";
+import { actionTypes } from "Reducer";
 
 const Container = styled.div`
   margin-top: 4.5%;
