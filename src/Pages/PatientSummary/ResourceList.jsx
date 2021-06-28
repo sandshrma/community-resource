@@ -1,6 +1,7 @@
 import React from "react";
-import { data } from "data/CommunityResources/List.json";
+import { data } from "Data/CommunityResources/List.json";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import {
   Input,
   Icon,
@@ -25,17 +26,23 @@ const InputContainer = styled.div`
 `;
 
 const ResourceList = (params) => {
+  const goBack = () => {
+    params.showList(false);
+  };
   return (
     <div className="w-100 p-4 pl-8">
       <div className="d-flex ">
-        {/* <Button onClick={params.showList(false)}> */}
-        <Icon size={20} name="arrow_backward" />
-        {/* </Button> */}
+        <Icon size={20} name="arrow_backward" onClick={goBack} />
         <Heading className="ml-6 pt-0 mt-0">Community Resources</Heading>{" "}
       </div>
       <div className="d-flex justify-content-start">
         <InputContainer>
-          <Input icon="search" name="input" placeholder="Search by name" />
+          <Input
+            icon="search"
+            name="input"
+            placeholder="Search by name"
+            autoComplete="off"
+          />
         </InputContainer>
         <InputContainer>
           <Input

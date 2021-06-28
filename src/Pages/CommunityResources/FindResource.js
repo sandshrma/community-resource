@@ -57,5 +57,3 @@ const FindResource = (params) => {
 };
 
 export default FindResource;
-
-//zip:12345;

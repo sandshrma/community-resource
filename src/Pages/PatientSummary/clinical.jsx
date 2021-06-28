@@ -1,6 +1,6 @@
 import React from "react";
 import { Heading, Input, Button, Icon } from "@innovaccer/design-system";
-import Accordion from "components/Accordion";
+import Accordion from "Components/Accordion";
 
 const Clinical = () => {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
-import Navigation from "../components/Navigation";
-import Search from "../pages/SearchPatient";
+import Navigation from "../Components/Navigation";
+import Search from "../Pages/SearchPatient";
 import { Switch, Route, useLocation } from "react-router-dom";
-import SearchResults from "../pages/SearchResults";
-import PatientInfo from "../pages/PatientSummary/PatientInfo";
+import SearchResults from "../Pages/SearchResults";
+import PatientInfo from "../Pages/PatientSummary/PatientInfo";
 
 function App() {
   const { pathname } = useLocation();

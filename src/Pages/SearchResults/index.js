@@ -1,10 +1,10 @@
 import React from "react";
 import { useStateValue } from "stateProvider";
-import GetData from "data/GetData";
+import GetData from "Data/GetData";
 import "@innovaccer/design-system/css";
 import styled from "styled-components";
 import PatientList from "./PatientList";
-import SearchBar from "components/Search";
+import SearchBar from "Components/Search";
 
 const Body = styled.div`
   width: 1470px;

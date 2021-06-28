@@ -1,7 +1,7 @@
 import React from "react";
 import { VerticalNav } from "@innovaccer/design-system";
-import Clinical from "pages/PatientSummary/clinical";
-import Community from "pages/PatientSummary/community";
+import Clinical from "Pages/PatientSummary/clinical";
+import Community from "Pages/PatientSummary/community";
 
 const VerticalNavigation = () => {
   const data = [

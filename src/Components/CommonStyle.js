@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import "@innovaccer/design-system/css";
-import { reStructure } from "helper";
+import { reStructure, Time } from "helper";
 
 const LightText = styled.div`
   color: var(--inverse-lighter);
@@ -47,6 +47,10 @@ const SubA = styled.a`
   color: black;
   text-decoration: none;
   text-align: left;
+`;
+const Text = styled.div`
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
 `;
 export const pair = (attribute, value) => {
   return (
@@ -95,5 +99,34 @@ export const dropdown = (phone) => {
     </DropDownLi>
   ) : (
     <div />
+  );
+};
+
+export const Timings = (data) => {
+  data = data.data;
+  // const today=new Date().getDay();
+  if (data.length === 0) return <div>NA</div>;
+  return (
+    <div>
+      {data.map((day) => {
+        if (day.status === "CLOSED")
+          return (
+            <Text className="d-flex">
+              {day.day.slice(0, 3).toUpperCase()}
+              <div className="ml-6">{day.status}</div>
+            </Text>
+          );
+        else {
+          return (
+            <Text className="d-flex">
+              {day.day.slice(0, 3).toUpperCase()}
+              <div className="ml-6">
+                {Time(day.opensOn)}-{Time(day.closesOn)}
+              </div>
+            </Text>
+          );
+        }
+      })}
+    </div>
   );
 };

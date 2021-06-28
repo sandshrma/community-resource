@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import Header from "components/Header";
-import VerticalNavigation from "components/VerticalNav.js";
+import Header from "Components/Header";
+import VerticalNavigation from "Components/VerticalNav.js";
 
 const PatientInfo = () => {
   const { state } = useLocation();

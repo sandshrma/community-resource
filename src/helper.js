@@ -69,3 +69,17 @@ export const reStructure = (PhoneNumber) => {
   }
   return PhoneNumber;
 };
+
+export const Time = (data) => {
+  if (data / 3600 >= 12) {
+    let hours = Math.floor(data / 3600) - 12;
+    let minutes = (data / 3600 - hours - 12) * 60;
+
+    return hours + ":" + minutes + " PM";
+  } else {
+    let hours = Math.floor(data / 3600);
+    let minutes = (data / 3600 - hours) * 60;
+
+    return hours + ":" + minutes + " AM";
+  }
+};

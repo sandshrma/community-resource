@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import dataInternal from "data/CommunityResources/Internal.json";
-import dataPartner from "data/CommunityResources/Partner-resources.json";
-import dataAuntBertha from "data/CommunityResources/AuntBertha.json";
+import dataInternal from "Data/CommunityResources/Internal.json";
+import dataPartner from "Data/CommunityResources/Partner-resources.json";
+import dataAuntBertha from "Data/CommunityResources/AuntBertha.json";
 import { Radio, Button } from "@innovaccer/design-system";
 import styled from "styled-components";
-import Icon from "components/ResourceIcons";
+import Icon from "Components/ResourceIcons";
 
 const Grid = styled.div`
   display: grid;

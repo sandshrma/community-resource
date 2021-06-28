@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import {
-  Button,
-  Sidesheet,
-  ModalDescription,
-  Icon,
-} from "@innovaccer/design-system";
+import { Button, Icon } from "@innovaccer/design-system";
 import { MdThumbDown, MdThumbUp } from "react-icons/md";
 import { phoneNumber, populationFocus, address } from "helper";
+import SideSheet from "Components/SideSheet";
 
 const Container = styled.div`
   text-align: left;
@@ -110,42 +106,6 @@ const ResourceCard = ({ data }: Data) => {
     isVisible("hidden");
   }
   const [open, setOpen] = useState(false);
-
-  const onClose = () => {
-    setOpen(!open);
-  };
-
-  const headerOptions = {
-    heading: "Heading",
-    subHeading: "Subheading",
-  };
-
-  const options = {
-    onClose,
-    open,
-    headerOptions,
-    footer: (
-      <>
-        <Button appearance="primary" className="mr-4">
-          Primary
-        </Button>
-        <Button appearance="basic">Basic</Button>
-      </>
-    ),
-  };
-  const modalDescriptionOptions = {
-    title: "Description Title",
-    description:
-      "Adding a subheading clearly indicates the hierarchy of the information.",
-    removePadding: true,
-  };
-
-  const modalDescriptionOptionsWithoutTitle = {
-    description:
-      "Card Sections include supporting text like an article summary or a restaurant description.",
-    removePadding: true,
-  };
-  console.log(data);
   return (
     <Container className="w-100 p-5" onMouseOver={show} onMouseOut={hide}>
       <Information>
@@ -167,7 +127,7 @@ const ResourceCard = ({ data }: Data) => {
               appearance="basic"
               size="regular"
               className="m-2"
-              onClick={() => setOpen(true)}
+              // onClick={() => setOpen(true)}
             >
               View Details
             </Button>
@@ -179,11 +139,6 @@ const ResourceCard = ({ data }: Data) => {
             >
               Refer Resource
             </Button>
-            <Sidesheet {...options} dimension="regular">
-              <Text>Modal Body</Text>
-              <ModalDescription {...modalDescriptionOptions} />
-              <ModalDescription {...modalDescriptionOptionsWithoutTitle} />
-            </Sidesheet>
           </div>
         </div>
         <div className="d-flex justify-content-between w-50">
@@ -234,6 +189,7 @@ const ResourceCard = ({ data }: Data) => {
             {address(data.facilities[0].address)}
           </div>
         </div>
+        <SideSheet setOpen={setOpen} open={open} data={data} />
       </Information>
     </Container>
   );

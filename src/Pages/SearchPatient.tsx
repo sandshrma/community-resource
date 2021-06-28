@@ -1,7 +1,7 @@
 import React from "react";
 import "@innovaccer/design-system/css";
 import styled from "styled-components";
-import SearchBar from "components/Search";
+import SearchBar from "Components/Search";
 import logo from "assets/search_home.png";
 
 const ImageContainer = styled.img`
