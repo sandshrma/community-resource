@@ -116,7 +116,7 @@ const ResourceCards = (params) => {
                       params.setChildren(index);
                     }}
                   />
-                  ({resource_type.count})
+                  <div className="m-2">({resource_type.count})</div>
                 </div>
               );
             })}

@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import { data } from "Data/CommunityResources/List.json";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import {
-  Input,
-  Icon,
-  Dropdown,
-  Caption,
-  Button,
-} from "@innovaccer/design-system";
+import { Input, Icon, Dropdown, Caption } from "@innovaccer/design-system";
 import ResourceCard from "./ResourceCard";
 
 const Heading = styled.h2`
@@ -65,12 +58,7 @@ const ResourceList = (params) => {
         <InputContainer className="mr-4">
           <Dropdown
             className="w-75"
-            options={[
-              { label: "Below 18", value: "below_18" },
-              { label: "19 - 35", value: "19-35" },
-              { label: "36 - 55", value: "36-55" },
-              { label: "56 and above", value: "56_above" },
-            ]}
+            options={[]}
             placeholder={"Service " + params.ResourceData.label}
           />
         </InputContainer>

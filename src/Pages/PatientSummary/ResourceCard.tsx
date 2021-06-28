@@ -13,6 +13,11 @@ const Container = styled.div`
     background-color: var(--secondary-lightest);
   }
 `;
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 18% 18% 18% auto;
+  grid-gap: 15% 0;
+`;
 
 const Information = styled.div`
   margin-left: 10px;
@@ -141,7 +146,7 @@ const ResourceCard = ({ data }: Data) => {
             </Button>
           </div>
         </div>
-        <div className="d-flex justify-content-between w-50">
+        <Grid>
           <div className="d-flex">
             <Icon
               size={18}
@@ -151,6 +156,8 @@ const ResourceCard = ({ data }: Data) => {
             />
             {populationFocus(data.populationFocus)}
           </div>
+          <div></div>
+          <div></div>
           <div className="d-flex">
             <Icon
               size={18}
@@ -160,13 +167,11 @@ const ResourceCard = ({ data }: Data) => {
             />
             NA
           </div>
-        </div>
-        <div className="d-flex pt-6">
-          <div className="d-flex mr-11">
+          <div className="d-flex">
             <Icon size={18} appearance="alert" name="place" className="mr-4" />
             NA
           </div>
-          <div className="d-flex mr-11">
+          <div className="d-flex">
             <Icon
               size={18}
               appearance="warning"
@@ -175,7 +180,7 @@ const ResourceCard = ({ data }: Data) => {
             />
             Closed
           </div>
-          <div className="d-flex mr-12">
+          <div className="d-flex">
             <Icon
               size={18}
               appearance="success"
@@ -184,11 +189,11 @@ const ResourceCard = ({ data }: Data) => {
             />
             {phoneNumber(data.facilities[0].phoneNumbers, "refer")}
           </div>
-          <div className="d-flex mr-12">
+          <div className="d-flex">
             <Icon size={18} appearance="info" name="near_me" className="mr-4" />
             {address(data.facilities[0].address)}
           </div>
-        </div>
+        </Grid>
         <SideSheet setOpen={setOpen} open={open} data={data} />
       </Information>
     </Container>

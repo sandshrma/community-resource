@@ -15,7 +15,6 @@ let array = [];
 
 const Patients = ({ data }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [ToShow, setToShow] = useState([]);
   const [Next, setNext] = useState(50);
   const [patients, setPatients] = useState([]);
 
@@ -23,14 +22,13 @@ const Patients = ({ data }) => {
     const slicedPosts = data.slice(start, end);
     array = [...array, ...slicedPosts];
     setPatients(array);
-    setToShow(array);
   };
   console.log(array);
 
   useEffect(() => {
     array = [];
     loopWithSlice(0, 50);
-  }, []);
+  }, [data]);
 
   function showMore() {
     loopWithSlice(Next, Next + 50);
@@ -49,16 +47,20 @@ const Patients = ({ data }) => {
         {patients.map((patient) => {
           return <Patient key={patient.empi} data={patient}></Patient>;
         })}
-        <div className="bg-light p-5 w-100">
-          <Button
-            size="medium"
-            type="submit"
-            onClick={showMore}
-            className="ml-auto mr-auto"
-          >
-            Load More Results
-          </Button>
-        </div>
+        {Next + 50 <= data.length ? (
+          <div className="bg-light p-5 w-100">
+            <Button
+              size="medium"
+              type="submit"
+              onClick={showMore}
+              className="ml-auto mr-auto"
+            >
+              Load More Results
+            </Button>
+          </div>
+        ) : (
+          <div></div>
+        )}
       </div>
     );
   } else {

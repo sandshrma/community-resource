@@ -11,9 +11,6 @@ const Container = styled.div`
   margin-top: 4.5%;
   margin-left: 28%;
 `;
-const Container3 = styled.div`
-  margin-top: 15px;
-`;
 const InputWrapper = styled.div`
   width: 500px;
   margin-right: 10px;
@@ -21,11 +18,6 @@ const InputWrapper = styled.div`
 const InputWrapper2 = styled.div`
   width: 360px;
   margin-right: 10px;
-`;
-const Container2 = styled.div`
-  margin-top: 10px;
-  margin-left: 28%;
-  margin-bottom: 10px;
 `;
 const Margin = styled.div`
   width: 15px;
@@ -41,13 +33,15 @@ const SearchBar = ({ type }: Pagetype) => {
   const [inputValue, setInput] = useState("");
 
   const search = (e: any) => {
-    e.preventDefault();
-    dispatch({
-      type: actionTypes.SET_SEARCH_TERM,
-      term: inputValue,
-    });
+    if (inputValue !== "") {
+      e.preventDefault();
+      dispatch({
+        type: actionTypes.SET_SEARCH_TERM,
+        term: inputValue,
+      });
 
-    history.push(`/search`);
+      history.push(`/search`);
+    }
   };
 
   return (
@@ -77,7 +71,7 @@ const SearchBar = ({ type }: Pagetype) => {
             </Button>
             <Margin />
           </Container>
-          <Container2 className="d-flex">
+          <div className="d-flex mt-4 ml-14 pl-13 mb-6">
             <Button
               appearance="basic"
               size="regular"
@@ -85,11 +79,11 @@ const SearchBar = ({ type }: Pagetype) => {
             >
               Advanced Search
             </Button>
-          </Container2>
+          </div>
         </div>
       ) : (
         <div>
-          <Container3 className=".m-14 d-flex">
+          <div className="mt-6 d-flex">
             <InputWrapper2>
               <Input
                 icon="search"
@@ -113,7 +107,6 @@ const SearchBar = ({ type }: Pagetype) => {
             >
               Search Patient
             </Button>
-
             <Button
               appearance="basic"
               size="regular"
@@ -121,7 +114,7 @@ const SearchBar = ({ type }: Pagetype) => {
             >
               Advanced Search
             </Button>
-          </Container3>
+          </div>
         </div>
       )}
     </div>

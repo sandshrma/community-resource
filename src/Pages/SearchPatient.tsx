@@ -16,7 +16,7 @@ const TextContainer = styled.h2`
   color: var(--inverse);
 `;
 
-const TextContainer2 = styled.div`
+const SubText = styled.div`
   text-align: center;
   font-size: var(--font-size-m);
   font-weight: 350;
@@ -31,10 +31,10 @@ const Search = () => {
       <SearchBar type="Home" />
       <ImageContainer src={logo} className="d-block ml-auto mr-auto mt-7" />
       <TextContainer>Looking for patients?</TextContainer>
-      <TextContainer2 className="d-block ml-auto mr-auto ">
+      <SubText className="d-block ml-auto mr-auto ">
         Enter patient details or make use of advanced search for a more specific
         search
-      </TextContainer2>
+      </SubText>
     </div>
   );
 };
