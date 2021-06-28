@@ -134,7 +134,7 @@ const ResourceCard = ({ data }: Data) => {
             <Button
               appearance="primary"
               size="regular"
-              className="m-2"
+              className="m-2 mr-6"
               onClick={() => setOpen(true)}
             >
               Refer Resource

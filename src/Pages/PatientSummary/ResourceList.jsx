@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { data } from "Data/CommunityResources/List.json";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -24,11 +24,17 @@ const InputContainer = styled.div`
   width: 20%;
   margin-left: 10px;
 `;
+const List = styled.div`
+  max-height: 470px;
+  overflow: hidden;
+  overflow-y: scroll;
+`;
 
 const ResourceList = (params) => {
   const goBack = () => {
     params.showList(false);
   };
+  const [SearchTerm, setSearchTerm] = useState("");
   return (
     <div className="w-100 p-4 pl-8">
       <div className="d-flex ">
@@ -39,9 +45,12 @@ const ResourceList = (params) => {
         <InputContainer>
           <Input
             icon="search"
-            name="input"
+            name="search"
             placeholder="Search by name"
             autoComplete="off"
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+            }}
           />
         </InputContainer>
         <InputContainer>
@@ -72,11 +81,18 @@ const ResourceList = (params) => {
           params.ResourceData.children[params.Children].label}
       </Caption>
       <SubHeading className="ml-5">{data.length + " "} RESOURCES</SubHeading>
-      <div className="ml-4 mt-6 mr-8">
-        {data.map((resource) => {
-          return <ResourceCard key={data.id} data={resource} />;
-        })}
-      </div>
+      <List className="ml-4 mt-6 mr-6">
+        {data
+          .filter((val) => {
+            if (SearchTerm === "") return val;
+            else {
+              return val.name.toLowerCase().includes(SearchTerm.toLowerCase());
+            }
+          })
+          .map((resource) => {
+            return <ResourceCard key={data.id} data={resource} />;
+          })}
+      </List>
     </div>
   );
 };
