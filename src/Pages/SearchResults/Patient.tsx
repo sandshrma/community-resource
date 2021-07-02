@@ -3,6 +3,7 @@ import "@innovaccer/design-system/css";
 import { Link } from "react-router-dom";
 import { fullName, Payer, phoneNumber, reStructure } from "helper";
 import { light, pair, dropdown } from "Components/CommonStyle";
+import { Data } from "interfaces";
 
 const Container = styled.div`
   text-align: left;
@@ -51,7 +52,7 @@ const Dot = styled.div`
   margin: 4px;
   margin-top: 7px;
 `;
-const Patient = ({ data }) => {
+const Patient = ({ data }: Data) => {
   const fullname = fullName(data.firstName, data.middleName, data.lastName);
   const payer = Payer(data.payers, "list");
   const phone_number = reStructure(phoneNumber(data.phone_number, "list"));

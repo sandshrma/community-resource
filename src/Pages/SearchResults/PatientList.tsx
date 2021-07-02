@@ -7,18 +7,22 @@ import {
   PlaceholderParagraph,
   Button,
 } from "@innovaccer/design-system";
+import { DataArray, Data, PatientData } from "interfaces";
 
 const LoaderConatiner = styled.div`
   border-bottom: var(--border);
 `;
-let array = [];
+let array: Data[];
 
-const Patients = ({ data }) => {
+const Patients = ({ data }: DataArray) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [Next, setNext] = useState(50);
-  const [patients, setPatients] = useState([]);
+  const [patients, setPatients]: any = useState([]);
 
-  const loopWithSlice = (start, end) => {
+  const loopWithSlice = (
+    start: number | undefined,
+    end: number | undefined
+  ) => {
     const slicedPosts = data.slice(start, end);
     array = [...array, ...slicedPosts];
     setPatients(array);
@@ -44,13 +48,13 @@ const Patients = ({ data }) => {
   if (isLoaded === true) {
     return (
       <div>
-        {patients.map((patient) => {
+        {patients.map((patient: PatientData) => {
           return <Patient key={patient.empi} data={patient}></Patient>;
         })}
         {Next + 50 <= data.length ? (
           <div className="bg-light p-5 w-100">
             <Button
-              size="medium"
+              size="regular"
               type="submit"
               onClick={showMore}
               className="ml-auto mr-auto"

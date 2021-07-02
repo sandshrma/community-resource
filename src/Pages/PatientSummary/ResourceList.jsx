@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { data } from "Data/CommunityResources/List.json";
 import styled from "styled-components";
 import { Input, Icon, Dropdown, Caption } from "@innovaccer/design-system";
-import ResourceCard from "./ResourceCard";
+import ResourceCard from "./ListItem";
 
 const Heading = styled.h2`
   font-weight: var(--font-weight-medium);

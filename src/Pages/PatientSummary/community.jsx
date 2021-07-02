@@ -23,7 +23,6 @@ const customStyles = {
     bottom: "0",
   },
 };
-
 const Community = () => {
   const [open, setOpen] = useState(false);
   const [List, showList] = useState(false);
@@ -31,19 +30,6 @@ const Community = () => {
   const [Zip, setZip] = useState("");
   const [ResourceData, setResourceData] = useState([]);
   const [Children, setChildren] = useState(0);
-
-  console.log(
-    "list: ",
-    List,
-    " Resource: ",
-    Resource,
-    " Zip: ",
-    Zip,
-    " ResourceData: ",
-    ResourceData,
-    "Children: ",
-    Children
-  );
 
   return List ? (
     <ResourceList

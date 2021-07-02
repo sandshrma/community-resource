@@ -4,6 +4,7 @@ import { Button, Icon } from "@innovaccer/design-system";
 import { MdThumbDown, MdThumbUp } from "react-icons/md";
 import { phoneNumber, populationFocus, address } from "helper";
 import SideSheet from "Components/SideSheet";
+import { ResourceType } from "interfaces";
 
 const Container = styled.div`
   text-align: left;
@@ -29,79 +30,7 @@ const IconStyle = styled.div`
   color: var(--inverse-lighter);
 `;
 
-interface Data {
-  data: {
-    name: string;
-    source: string;
-    description: string;
-    nameDescription: string;
-    websiteLinks: string[];
-    populationFocus: string[];
-    active: boolean;
-    upVotes: number;
-    downVotes: number;
-    resourceType: string;
-    facilities: [
-      {
-        resourceId: string;
-        address: string;
-        phoneNumbers: [
-          {
-            value: string;
-            type: string;
-          }
-        ];
-        emailIds: string[];
-        operationalTimings: [
-          {
-            opensOn: number;
-            closesOn: number;
-            day: string;
-            status: string;
-          },
-          {
-            opensOn: number;
-            closesOn: number;
-            day: string;
-            status: string;
-          },
-          {
-            opensOn: number;
-            closesOn: number;
-            day: string;
-            status: string;
-          },
-          {
-            opensOn: number;
-            closesOn: number;
-            day: string;
-            status: string;
-          },
-          {
-            opensOn: number;
-            closesOn: number;
-            day: string;
-            status: string;
-          },
-          {
-            opensOn: number;
-            closesOn: number;
-            day: string;
-            status: string;
-          },
-          {
-            opensOn: number;
-            closesOn: number;
-            day: string;
-            status: string;
-          }
-        ];
-      }
-    ];
-  };
-}
-
-const ResourceCard = ({ data }: Data) => {
+const ResourceCard = ({ data }: ResourceType) => {
   type IsVisible = "hidden" | "visible";
   const [Visible, isVisible] = useState<IsVisible>("hidden");
   function show() {

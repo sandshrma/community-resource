@@ -24,7 +24,6 @@ const InputWrapper = styled.div`
 const CommunityResources = (params: any) => {
   const [inputValue, setInput] = useState("");
   const [Zip, setZip] = useState("12345");
-  console.log(inputValue);
   params.setZip(Zip);
 
   return (
