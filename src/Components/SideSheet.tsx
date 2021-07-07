@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import ModalContent from "Pages/PatientSummary/ModalContent.js";
+import { sidesheetProps } from "interfaces";
 
 const customStyles = {
   content: {
@@ -10,10 +11,9 @@ const customStyles = {
     bottom: "0",
   },
 };
-// interface OpenState {
-//   open: boolean;
-// }
-const SideSheet = (params: any) => {
+
+const SideSheet = (params: sidesheetProps) => {
+  console.log(params.data);
   return (
     <Modal
       isOpen={params.open}

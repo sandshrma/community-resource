@@ -5,6 +5,11 @@ import dataAuntBertha from "Data/CommunityResources/AuntBertha.json";
 import { Radio, Button } from "@innovaccer/design-system";
 import styled from "styled-components";
 import Icon from "Components/ResourceIcons";
+import {
+  FindResourceProps,
+  ResourceData,
+  SingleResourceData,
+} from "interfaces";
 
 const Grid = styled.div`
   display: grid;
@@ -21,15 +26,15 @@ const Card1 = styled.div`
   }
 `;
 
-const ResourceCards = (params) => {
+const ResourceCards = (params: FindResourceProps) => {
   const [ShowChildren, setShowChildren] = useState(true);
   const [Index, setIndex] = useState(-1);
   const [Disabled, setDisabled] = useState(true);
-  const resource = params.resource;
+  const resource = params.input;
   const show = () => {
     setShowChildren(!ShowChildren);
   };
-  var data;
+  var data: ResourceData;
   if (resource === "Internal Resource") {
     data = dataInternal;
   } else if (resource === "Partner Resource") {
@@ -37,14 +42,15 @@ const ResourceCards = (params) => {
   } else {
     data = dataAuntBertha;
   }
+  console.log(data);
   return (
     <div className="mb-4">
       <Grid>
         {resource === "Partner Resource" ? (
-          data.nodes.map((resource_type, index) => {
+          data.nodes.map((resource_type: SingleResourceData, index: number) => {
             return (
               <Card1
-                shadow="none"
+                // shadow="none"
                 className="p-3"
                 style={{
                   color: Index === index ? "#0070DD" : "",
@@ -68,10 +74,10 @@ const ResourceCards = (params) => {
             );
           })
         ) : ShowChildren ? (
-          data.nodes.map((resource_type, index) => {
+          data.nodes.map((resource_type: SingleResourceData, index: number) => {
             return (
               <Card1
-                shadow="none"
+                // shadow="none"
                 className="p-3"
                 onClick={() => {
                   setIndex(index);
@@ -101,11 +107,11 @@ const ResourceCards = (params) => {
             >
               {"<"}
             </Button>
-            {data.nodes[Index].children.map((resource_type, index) => {
+            {data.nodes[Index].children?.map((resource_type, index) => {
               return (
                 <div
                   className="ml-9 d-flex p-3"
-                  style={{ width: "300px", fontWeight: "700" }}
+                  style={{ width: "300px", fontWeight: "bolder" }}
                 >
                   <Radio
                     label={resource_type.label}

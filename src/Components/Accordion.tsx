@@ -21,7 +21,6 @@ const Accordion = () => {
   const toggle = () => {
     setState(!state);
   };
-  console.log(state);
   return (
     <AccordianSection className="mt-4 flex-fill">
       <div className="d-flex justify-content-between">

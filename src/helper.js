@@ -9,7 +9,8 @@ function capitalize(str) {
   return str[0].toUpperCase() + str.slice(1);
 }
 export const populationFocus = (focus) => {
-  return focus.length === 0 || focus[0] === "" ? "NA" : focus[0];
+  if (focus) return focus.length === 0 || focus[0] === "" ? "NA" : focus[0];
+  return "NA";
 };
 
 export const address = (address) => {

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "@innovaccer/design-system";
 import ResourceCards from "./ResourceCards";
+import { FindResourceProps } from "interfaces";
 
 const Container = styled.div`
   border: 0.5px solid var(--secondary-dark);
@@ -18,7 +19,7 @@ const SubText = styled.div`
   color: var(--inverse-lighter);
 `;
 
-const FindResource = (params) => {
+const FindResource = (params: FindResourceProps) => {
   const input = params.input;
   params.setResource(params.input);
   return (
@@ -43,7 +44,7 @@ const FindResource = (params) => {
           {" "}
           <ResourceCards
             setOpen={params.setOpen}
-            resource={input}
+            input={input}
             showList={params.showList}
             setZip={params.setZip}
             setResource={params.setResource}

@@ -14,12 +14,13 @@ import {
 } from "@innovaccer/design-system";
 import { phoneNumber, address } from "helper";
 import { Timings } from "Components/CommonStyle";
+import Getlocation from "Data/location/GeoCode";
 
 const Header = styled.div`
-  border-bottom: 1px solid var(--secondary-lighter);
+  border-bottom: var(--border);
 `;
 const CommentBox = styled.textarea`
-  border: 1px solid var(--secondary);
+  border: var(--border);
   border-radius: 5px;
   :hover {
     border: 1px solid var(--primary);
@@ -33,11 +34,16 @@ const Body = styled.div`
   overflow: hidden;
   overflow-y: scroll;
 `;
+const InfoSection = styled.div`
+  border-bottom: var(--border);
+`;
+let array = ["Phone", "Email", "Text", "No Contact"];
 
 const ModalContent = (data) => {
   const date = new Date();
   const { state } = useLocation();
   const [disabled, isDisabled] = useState(true);
+
   return (
     <div>
       <Header className="position-sticky">
@@ -50,7 +56,7 @@ const ModalContent = (data) => {
         <Caption className="pb-6">{data.data.name}</Caption>
       </Header>
       <Body>
-        <div>
+        <InfoSection>
           <h5>PLEASE FILL REFERRAL DETAILS</h5>
           <div className="my-4">
             <Label required={true}>Select Social need</Label>
@@ -101,37 +107,20 @@ const ModalContent = (data) => {
           <div className="my-7">
             <Label required="true">Preferred mode of contact</Label>
             <div className="d-flex my-4">
-              <Radio
-                label="Phone"
-                name="contact"
-                value="Phone"
-                //onChange={(e) => setInput(e.target.value)}
-                className=" pr-8"
-              />
-              <Radio
-                label="Email"
-                name="contact"
-                value="Email"
-                //onChange={(e) => setInput(e.target.value)}
-                className=" pr-8"
-              />
-              <Radio
-                label="Text"
-                name="contact"
-                value="Text"
-                //onChange={(e) => setInput(e.target.value)}
-                className=" pr-8"
-              />
-              <Radio
-                label="No Contact"
-                name="contact"
-                value="No Contact"
-                //onChange={(e) => setInput(e.target.value)}
-                className=" pr-8"
-              />
+              {array.map((contactmode) => {
+                return (
+                  <Radio
+                    label={contactmode}
+                    name="contact"
+                    value={contactmode}
+                    onChange={(e) => isDisabled(false)}
+                    className="pr-8"
+                  />
+                );
+              })}
             </div>
           </div>
-          <div>
+          <div className="mb-6">
             <div className="mb-4">
               <Label>Comments</Label>
             </div>
@@ -141,14 +130,7 @@ const ModalContent = (data) => {
               placeholder="Enter your Comments Here"
             />
           </div>
-        </div>
-        <hr
-          style={{
-            height: "0.5px",
-            borderWidth: "0",
-            backgroundColor: "var(--secondary)",
-          }}
-        />
+        </InfoSection>
         <div className="d-flex justify-content-between">
           <div>
             <h4>1 Nearest Location to 12345</h4>

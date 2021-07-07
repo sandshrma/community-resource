@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 interface Number {
   phone_number: string;
   preferred: boolean;
@@ -143,75 +145,88 @@ export interface PatientData {
 export interface DataArray {
   data: Data[];
 }
-
+interface timing {
+  opensOn: number;
+  closesOn: number;
+  day: string;
+  status: string;
+}
 export interface ResourceType {
-  data: {
-    name: string;
-    source: string;
-    description: string;
-    nameDescription: string;
-    websiteLinks: string[];
-    populationFocus: string[];
-    active: boolean;
-    upVotes: number;
-    downVotes: number;
-    resourceType: string;
-    facilities: [
-      {
-        resourceId: string;
-        address: string;
-        phoneNumbers: [
-          {
-            value: string;
-            type: string;
-          }
-        ];
-        emailIds: string[];
-        operationalTimings: [
-          {
-            opensOn: number;
-            closesOn: number;
-            day: string;
-            status: string;
-          },
-          {
-            opensOn: number;
-            closesOn: number;
-            day: string;
-            status: string;
-          },
-          {
-            opensOn: number;
-            closesOn: number;
-            day: string;
-            status: string;
-          },
-          {
-            opensOn: number;
-            closesOn: number;
-            day: string;
-            status: string;
-          },
-          {
-            opensOn: number;
-            closesOn: number;
-            day: string;
-            status: string;
-          },
-          {
-            opensOn: number;
-            closesOn: number;
-            day: string;
-            status: string;
-          },
-          {
-            opensOn: number;
-            closesOn: number;
-            day: string;
-            status: string;
-          }
-        ];
-      }
-    ];
-  };
+  name: string;
+  source: string;
+  description: string;
+  nameDescription: string;
+  websiteLinks: string[];
+  populationFocus: string[];
+  active: boolean;
+  upVotes: number;
+  downVotes: number;
+  resourceType: string;
+  facilities: [
+    {
+      resourceId: string;
+      address: string;
+      phoneNumbers: [
+        {
+          value: string;
+          type: string;
+        }
+      ];
+      emailIds: string[];
+      operationalTimings: timing[];
+    }
+  ];
+}
+export interface ResourceDataType {
+  data: ResourceType;
+}
+interface children {
+  label: string;
+  value: string;
+  count: string;
+}
+
+interface SubResource {
+  label: string;
+  value: string;
+  id?: string;
+  sheetIndex?: number;
+  count?: number | string;
+  children?: children[];
+}
+export interface SingleResourceData {
+  label: string;
+  value: string;
+  count?: number;
+  children?: SubResource[];
+  id?: string;
+}
+
+export interface ResourceData {
+  nodes: SingleResourceData[];
+}
+
+export interface ModalProps {
+  setOpen: Dispatch<SetStateAction<boolean>>;
+  showList: Dispatch<SetStateAction<boolean>>;
+  setZip: Dispatch<SetStateAction<string>>;
+  setResource: Dispatch<SetStateAction<string>>;
+  setResourceData: Dispatch<SetStateAction<SingleResourceData>>;
+  setChildren: Dispatch<SetStateAction<number>>;
+}
+
+export interface FindResourceProps {
+  setOpen: Dispatch<SetStateAction<boolean>>;
+  input: string;
+  showList: Dispatch<SetStateAction<boolean>>;
+  setZip: Dispatch<SetStateAction<string>>;
+  setResource: Dispatch<SetStateAction<string>>;
+  setResourceData: Dispatch<SetStateAction<SingleResourceData>>;
+  setChildren: Dispatch<SetStateAction<number>>;
+}
+
+export interface sidesheetProps {
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+  data: ResourceType;
 }

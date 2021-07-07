@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Input, Icon, Radio } from "@innovaccer/design-system";
 import logo from "assets/aunt_bertha.png";
 import FindResource from "./FindResource";
+import { ModalProps } from "interfaces";
 
 const Container = styled.div`
   text-align: left;
@@ -21,10 +22,12 @@ const InputWrapper = styled.div`
   width: 60px;
 `;
 
-const CommunityResources = (params: any) => {
-  const [inputValue, setInput] = useState("");
-  const [Zip, setZip] = useState("12345");
-  params.setZip(Zip);
+const CommunityResources = (params: ModalProps) => {
+  const [inputValue, setInput] = useState<string>("");
+  const [Zip, setZip] = useState<string>("12345");
+  if (params.setZip) {
+    params.setZip(Zip);
+  }
 
   return (
     <Container className="ml-auto mr-auto">

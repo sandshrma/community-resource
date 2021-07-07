@@ -21,8 +21,6 @@ const Name = styled.div`
 `;
 
 const Header = ({ data }: Data) => {
-  console.log(data);
-
   return (
     <Wrapper className="position-static d-flex w-100 align-items-center bg-light">
       <Icon size={10} className="m-4 ml-6">

@@ -4,7 +4,7 @@ import { Button, Icon } from "@innovaccer/design-system";
 import { MdThumbDown, MdThumbUp } from "react-icons/md";
 import { phoneNumber, populationFocus, address } from "helper";
 import SideSheet from "Components/SideSheet";
-import { ResourceType } from "interfaces";
+import { ResourceDataType } from "interfaces";
 
 const Container = styled.div`
   text-align: left;
@@ -30,7 +30,8 @@ const IconStyle = styled.div`
   color: var(--inverse-lighter);
 `;
 
-const ResourceCard = ({ data }: ResourceType) => {
+const ResourceCard = ({ data }: ResourceDataType) => {
+  console.log(data);
   type IsVisible = "hidden" | "visible";
   const [Visible, isVisible] = useState<IsVisible>("hidden");
   function show() {
@@ -116,11 +117,11 @@ const ResourceCard = ({ data }: ResourceType) => {
               name="phone"
               className="mr-4"
             />
-            {phoneNumber(data.facilities[0].phoneNumbers, "refer")}
+            {phoneNumber(data?.facilities[0]?.phoneNumbers, "refer")}
           </div>
           <div className="d-flex">
             <Icon size={18} appearance="info" name="near_me" className="mr-4" />
-            {address(data.facilities[0].address)}
+            {address(data?.facilities[0]?.address)}
           </div>
         </Grid>
         <SideSheet setOpen={setOpen} open={open} data={data} />
