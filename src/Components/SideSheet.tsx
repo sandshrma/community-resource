@@ -13,7 +13,6 @@ const customStyles = {
 };
 
 const SideSheet = (params: sidesheetProps) => {
-  console.log(params.data);
   return (
     <Modal
       isOpen={params.open}

@@ -31,7 +31,6 @@ const IconStyle = styled.div`
 `;
 
 const ResourceCard = ({ data }: ResourceDataType) => {
-  console.log(data);
   type IsVisible = "hidden" | "visible";
   const [Visible, isVisible] = useState<IsVisible>("hidden");
   function show() {

@@ -42,7 +42,6 @@ const ResourceCards = (params: FindResourceProps) => {
   } else {
     data = dataAuntBertha;
   }
-  console.log(data);
   return (
     <div className="mb-4">
       <Grid>

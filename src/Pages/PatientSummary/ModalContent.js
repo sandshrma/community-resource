@@ -14,7 +14,7 @@ import {
 } from "@innovaccer/design-system";
 import { phoneNumber, address } from "helper";
 import { Timings } from "Components/CommonStyle";
-import Getlocation from "Data/location/GeoCode";
+import BookRide from "Components/BookRide";
 
 const Header = styled.div`
   border-bottom: var(--border);
@@ -43,7 +43,6 @@ const ModalContent = (data) => {
   const date = new Date();
   const { state } = useLocation();
   const [disabled, isDisabled] = useState(true);
-
   return (
     <div>
       <Header className="position-sticky">
@@ -161,6 +160,10 @@ const ModalContent = (data) => {
               />
               NA
             </div>
+            <BookRide
+              pickup={12345}
+              drop={address(data.data.facilities[0].address)}
+            />
           </div>
           <div className="d-flex p-9">
             <Icon
